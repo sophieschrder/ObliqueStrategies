@@ -3,7 +3,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
 import { HistoriePage} from "../pages/historie/historie";
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -30,9 +29,8 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage },
-      { title: 'My Slides', component: SlidesPage},
+      { title: 'Startseite', component: HelloIonicPage },
+      { title: 'Stöbern', component: SlidesPage},
       { title: 'Meine Spielhistorie', component: HistoriePage}
     ];
   }
