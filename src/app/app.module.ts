@@ -10,6 +10,7 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {SlidesPage} from "../pages/slides/slides";
+import {HistoriePage} from "../pages/historie/historie";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {SlidesPage} from "../pages/slides/slides";
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    SlidesPage
+    SlidesPage,
+    HistoriePage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import {SlidesPage} from "../pages/slides/slides";
     HelloIonicPage,
     ItemDetailsPage,
     ListPage,
-    SlidesPage
+    SlidesPage,
+    HistoriePage
   ],
   providers: [
     StatusBar,

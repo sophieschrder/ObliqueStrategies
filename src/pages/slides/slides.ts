@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {CARDS} from "../../assets/mock-cards";
+import {Card} from "../../cards";
 
-/**
- * Generated class for the SlidesPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -14,6 +10,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'slides.html',
 })
 export class SlidesPage {
+
+  cards: Array<Card> = CARDS;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
