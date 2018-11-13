@@ -1,14 +1,15 @@
 page-slides {
   ion-slide{
-    background: #ffcb05;
+    background: white;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    border: 2px solid #ffcb05;
   }
 
   h2 {
     font-weight: normal;
-    color: white;
+    color: #ffcb05;
   }
 
   p {
