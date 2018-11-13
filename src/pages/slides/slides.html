@@ -12,11 +12,10 @@
 
 <ion-content padding>
   <ion-slides pager>
-
     <ion-slide *ngFor="let card of cards">
-     <ion-icon name="chatbubbles"></ion-icon>
-      <h2>{{card.text}}</h2>
       <p>Kategorie: {{card.category}}</p>
+     <ion-icon name="chatbubbles" ></ion-icon>
+      <h2>{{card.text}}</h2>
     </ion-slide>
 
   </ion-slides>

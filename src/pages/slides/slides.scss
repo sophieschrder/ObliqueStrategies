@@ -5,17 +5,17 @@ page-slides {
     background-size: cover;
     background-repeat: no-repeat;
     border: 0.3em solid #ffcb05;
-    background-image: url('../../assets/imgs/dots.jpg');
+    background-image: url('../../assets/imgs/lines_black.png');
   }
 
   ion-icon{
-    font-size: 4em;
+    font-size: 5em;
     background-color: white;
-    padding: 0.5em;
+    padding: 0.4em;
   }
 
   h2 {
-    font-weight: normal;
+    font-weight: bolder;
     color: #ffcb05;
     background-color: white;
     padding: 1em;
@@ -26,7 +26,8 @@ page-slides {
     font-weight: lighter;
     background-color: white;
     padding: 1em;
-    margin: 0.5em;
+    text-align: center;
+    width: 100%;
   }
 
 }
