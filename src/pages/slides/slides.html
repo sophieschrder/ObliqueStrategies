@@ -14,7 +14,9 @@
   <ion-slides pager>
 
     <ion-slide *ngFor="let card of cards">
+     <ion-icon name="chatbubbles"></ion-icon>
       <h2>{{card.text}}</h2>
+      <p>Kategorie: {{card.category}}</p>
     </ion-slide>
 
   </ion-slides>

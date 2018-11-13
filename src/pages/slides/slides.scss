@@ -1,9 +1,18 @@
-page-slides {
+git page-slides {
  ion-slide{
    background: #ffcb05;
-   background-image: url('../../assets/imgs/Q_solo_thin_rgb.png');
    background-position: center;
    background-size: contain;
    background-repeat: no-repeat;
  }
+
+ h2 {
+   font-weight: normal;
+   color: white;
+ }
+
+ p {
+   font-weight: lighter;
+ }
+
 }
