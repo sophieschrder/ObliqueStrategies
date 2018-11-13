@@ -2,18 +2,31 @@ page-slides {
   ion-slide{
     background: white;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    border: 2px solid #ffcb05;
+    border: 0.3em solid #ffcb05;
+    background-image: url('../../assets/imgs/dots.jpg');
+  }
+
+  ion-icon{
+    font-size: 4em;
+    background-color: white;
+    padding: 0.5em;
   }
 
   h2 {
     font-weight: normal;
     color: #ffcb05;
+    background-color: white;
+    padding: 1em;
+    margin: 0.5em;
   }
 
   p {
     font-weight: lighter;
+    background-color: white;
+    padding: 1em;
+    margin: 0.5em;
   }
 
 }
