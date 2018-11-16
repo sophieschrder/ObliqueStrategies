@@ -7,7 +7,6 @@ import { HistoriePage} from "../pages/historie/historie";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {SlidesPage} from "../pages/slides/slides";
 import {StoebernPage} from "../pages/stoebern/stoebern";
 
 
@@ -32,8 +31,7 @@ export class MyApp {
     this.pages = [
       { title: 'Startseite', component: StartPage },
       { title: 'Stöbern', component: StoebernPage},
-      { title: 'Meine Spielhistorie', component: HistoriePage},
-      { title: 'Alle Karten', component: SlidesPage},
+      { title: 'Meine Spielhistorie', component: HistoriePage}
     ];
   }
 
