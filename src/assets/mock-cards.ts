@@ -100,7 +100,27 @@ export const CARDS: Card[] = [
   { id: 25, title: 'tauschen', category: "stellDirVor",
     text: "Iss heute fünf Portionen Obst",
     img: "some url", history: ['02-1-2018', "06-2-2018"]
-  }
+  },
+  { id: 26, title: 'mittagessen', category: "Perspektivwechsel",
+    text: "Esse an einem Dir unbekannten Ort zu Mittag",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 27, title: 'umweg', category: "Perspektivwechsel",
+    text: "Nimm einen Weg nach Hause, den du sonst nie gehst.",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 28, title: 'rentner', category: "Perspektivwechsel",
+    text: "Erkläre einem älteren Verwandten woran du gerade arbeitest.",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 29, title: 'kind', category: "Perspektivwechsel",
+    text: "Erläre einem Kind woran du gerade arbeitest.",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 30, title: 'nachbar', category: "Perspektivwechsel",
+    text: "Klingel bei den Nachbarn und biete deine Hilfe an",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
 ];
 
 
