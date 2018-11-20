@@ -8,6 +8,7 @@ import { HistoriePage} from "../pages/historie/historie";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {StoebernPage} from "../pages/stoebern/stoebern";
+import {AboutPage} from "../pages/about/about";
 
 
 @Component({
@@ -31,7 +32,8 @@ export class MyApp {
     this.pages = [
       { title: 'Startseite', component: StartPage },
       { title: 'Stöbern', component: StoebernPage},
-      { title: 'Meine Spielhistorie', component: HistoriePage}
+      { title: 'Meine Spielhistorie', component: HistoriePage},
+      { title: 'About', component: AboutPage}
     ];
   }
 

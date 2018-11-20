@@ -10,6 +10,7 @@ import {HistoriePage} from "../pages/historie/historie";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {StoebernPage} from "../pages/stoebern/stoebern";
+import {AboutPage} from "../pages/about/about";
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {StoebernPage} from "../pages/stoebern/stoebern";
     StartPage,
     SlidesPage,
     HistoriePage,
-    StoebernPage
+    StoebernPage,
+    AboutPage
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import {StoebernPage} from "../pages/stoebern/stoebern";
     StartPage,
     HistoriePage,
     StoebernPage,
-    SlidesPage
+    SlidesPage,
+    AboutPage
   ],
   providers: [
     StatusBar,
