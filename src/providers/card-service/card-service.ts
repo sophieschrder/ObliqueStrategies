@@ -1,17 +1,16 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import {CARDS} from "../../assets/mock-cards";
+import {Card} from "../../cards";
 
-/*
-  Generated class for the CardServiceProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable()
 export class CardServiceProvider {
 
-  constructor(public http: HttpClient) {
+  constructor() {
     console.log('Hello CardServiceProvider Provider');
+  }
+
+  getCards(): Array<Card> {
+    return CARDS;
   }
 
 }

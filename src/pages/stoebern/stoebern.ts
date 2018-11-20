@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {CARDS} from "../../assets/mock-cards";
 import {Card} from "../../cards";
 import {SlidesPage} from "../slides/slides";
+import {CardServiceProvider} from "../../providers/card-service/card-service";
+
 
 @IonicPage()
 @Component({
@@ -11,9 +12,10 @@ import {SlidesPage} from "../slides/slides";
 })
 export class StoebernPage {
 
-  cards: Array<Card> = CARDS;
+  cards: Array<Card>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider) {
+  this.cards = this.myCardsService.getCards();
   }
 
   ionViewDidLoad() {
