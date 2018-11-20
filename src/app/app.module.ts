@@ -11,6 +11,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {StoebernPage} from "../pages/stoebern/stoebern";
 import {AboutPage} from "../pages/about/about";
+import { CardServiceProvider } from '../providers/card-service/card-service';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import {AboutPage} from "../pages/about/about";
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    CardServiceProvider
   ]
 })
 export class AppModule {}
