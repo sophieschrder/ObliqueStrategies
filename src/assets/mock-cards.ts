@@ -121,6 +121,46 @@ export const CARDS: Card[] = [
     text: "Klingel bei den Nachbarn und biete deine Hilfe an",
     img: "some url", history: ['02-1-2018', "06-2-2018"]
   },
+  { id: 31, title: 'sprache', category: "Arbeitsmittel",
+    text: "Ändere die Sprache deiner Tasteratur",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 32, title: 'progsprache', category: "Arbeitsmittel",
+    text: "Arbeite in einer anderen Programmiersprache",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 33, title: 'maus', category: "Arbeitsmittel",
+    text: "Arbeite ohne Alt + Tab",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 34, title: 'maus', category: "Arbeitsmittel",
+    text: "Arbeite heute ohne Maus",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 35, title: 'maus', category: "Arbeitsmittel",
+    text: "Tippe mit nur einer Hand",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 36, title: 'stift', category: "Arbeitsmittel",
+    text: "Arbeite nur mit Stift und Papier",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 37, title: 'internet', category: "Arbeitsmittel",
+    text: "Arbeite ohne Internetverbindung",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 38, title: 'maus', category: "Arbeitsmittel",
+    text: "Nutze die Maus mit der ungewohnten Hand",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 39, title: 'maus', category: "Arbeitsmittel",
+    text: "Arbeite ohne Computer",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  },
+  { id: 40, title: 'maus', category: "Arbeitsmittel",
+    text: "Arbeite nur mit dem Notebookmonitor",
+    img: "some url", history: ['02-1-2018', "06-2-2018"]
+  }
 ];
 
 
