@@ -1,0 +1,50 @@
+
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Stöbermodus</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div>
+    <button ion-button (click)="showAll()">
+      Alle Karten
+    </button>
+  </div>
+  <div>
+    <button ion-button (click)="pushPage('kommunikation')">
+      Kommunikation
+    </button>
+  </div>
+  <div>
+    <button ion-button (click)="pushPage('arbeitsplatz')">
+    Arbeitsplatz
+    </button>
+  </div>
+  <div>
+    <button ion-button (click)="pushPage('bleibTapfer')">
+      Bleib Tapfer
+    </button>
+  </div>
+  <div>
+    <button ion-button (click)="pushPage('informationsbeschaffung')">
+      Informationsbeschaffung
+    </button>
+  </div>
+  <div>
+    <button ion-button (click)="pushPage('stellDirVor')">
+      Stell dir vor
+    </button>
+  </div>
+  <div>
+    <button ion-button (click)="pushPage('arbeitsmittel')">
+      Stell dir vor
+    </button>
+  </div>
+
+
+</ion-content>

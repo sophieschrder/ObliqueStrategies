@@ -9,6 +9,7 @@ import {HistoriePage} from "../pages/historie/historie";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import {StoebernPage} from "../pages/stoebern/stoebern";
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MyApp,
     StartPage,
     SlidesPage,
-    HistoriePage
+    HistoriePage,
+    StoebernPage
   ],
   imports: [
     BrowserModule,
@@ -26,8 +28,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     StartPage,
-    SlidesPage,
-    HistoriePage
+    HistoriePage,
+    StoebernPage,
+    SlidesPage
   ],
   providers: [
     StatusBar,
