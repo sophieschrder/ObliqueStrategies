@@ -1,9 +1,9 @@
 
 <ion-header>
 <ion-navbar>
-  <!--<button ion-button menuToggle>
+<button ion-button menuToggle>
     <ion-icon name="menu"></ion-icon>
-  </button>-->
+  </button>
   <ion-title></ion-title>
 </ion-navbar>
 </ion-header>
@@ -12,14 +12,12 @@
 
 
 <ion-content padding>
-
   <ion-slides pager loop="true" >
     <ion-slide *ngFor="let card of cards" ngClass="{{card.category}}">
       <p class="card-category"><b>{{card.category}}</b></p>
      <ion-icon name="images"></ion-icon>
       <h3>{{card.text}}</h3>
-
-
+</ion-slide>
   </ion-slides>
 </ion-content>
 
