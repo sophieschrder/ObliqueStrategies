@@ -5,5 +5,5 @@ export class Card {
   text: string;
   img: string;
   history: Array<string>;
-  color: string;
+
 }

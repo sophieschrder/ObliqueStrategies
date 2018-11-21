@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -15,6 +14,7 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+
 @font-face{
   font-family: Marvel;
   src: url('../assets/fonts/Marvel/Marvel-Regular.ttf')
@@ -23,3 +23,14 @@
 *{
   font-family: Marvel;
 }
+
+$kommunikation:    #488aff;
+$arbeitsmittel:   #f53d3d;
+$arbeitsplatz: #565343;
+$bleibTapfer: #0d561d;
+$informationsbeschaffung: #56144d;
+$perspektivwechsel: #560d00;
+$stellDirVor: #0f564c;
+$joker: #100056;
+
+
