@@ -1,7 +1,9 @@
 page-stoebern {
 
 
-
+p {
+  font-size: 18px;
+}
   .kommunikation:hover {
     background-color: $kommunikation-hover !important;
   }
@@ -42,8 +44,6 @@ page-stoebern {
   button.kommunikation {
     background-color: $kommunikation;
     color: white;
-    float: left;
-    width: 30%;
     height: 5em;
     padding: 3px;
 
@@ -52,8 +52,6 @@ page-stoebern {
   button.Arbeitsmittel {
     background-color: $arbeitsmittel;
     color: white;
-    float: left;
-    width: 62%;
     height: 5em;
     padding: 3px;
 
@@ -62,16 +60,12 @@ page-stoebern {
   button.arbeitsplatz {
     background-color: $arbeitsplatz;
     color: white;
-    float: left;
-    width: 30%;
     height: 5em;
     padding: 3px;
   }
   button.bleibTapfer {
     background-color: $bleibTapfer;
     color: white;
-    float: left;
-    width: 30%;
     height: 5em;
     padding: 3px;
   }
@@ -79,8 +73,6 @@ page-stoebern {
   button.informationsbeschaffung {
     background-color: $informationsbeschaffung;
     color: white;
-    float: left;
-    width: 93%;
     height: 5em;
     padding: 3px;
   }
@@ -88,8 +80,6 @@ page-stoebern {
   button.Perspektivwechsel {
     background-color: $perspektivwechsel;
     color: white;
-    float: left;
-    width: 93%;
     height: 5em;
     padding: 3px;
   }
@@ -97,8 +87,6 @@ page-stoebern {
   button.stellDirVor {
     background-color: $stellDirVor;
     color: white;
-    float: left;
-    width: 30%;
     height: 5em;
     padding: 3px;
   }
@@ -107,7 +95,6 @@ page-stoebern {
   button.all {
     background-color: darkgrey;
     color: white;
-    width: 93%;
     padding: 3px;
     height: 5em;
   }

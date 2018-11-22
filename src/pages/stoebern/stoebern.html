@@ -10,59 +10,81 @@
 
 
 <ion-content padding>
-<ion-card>
-
-  <!-- <img src="../../assets/imgs/logo.png"> -->
-
-  <ion-card-content>
-
-    <ion-card-title>
-      Der Stöbermodus
-    </ion-card-title>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+  <div>
     <p>Im Stöbermodus kannst du dir alle Karten des Spiels anschauen oder in den einzelnen Kategorien stöbern, um dir
       so einen Überblick zu verschaffen was dich erwartet. </p>
+ </div>
+      </ion-col>
+    </ion-row>
 
-  <div>
-    <button ion-button  (click)="showAll()" class="all">
-      Alle Karten
-    </button>
-  </div>
-  <div>
-    <button ion-button (click)="pushPage('kommunikation')" class="kommunikation">
-      Kommunikation
-    </button>
-  </div>
-  <div>
-    <button ion-button (click)="pushPage('arbeitsplatz')" class="arbeitsplatz">
-      Arbeitsplatz
-    </button>
-  </div>
-  <div>
-    <button ion-button (click)="pushPage('bleibTapfer')" class="bleibTapfer" >
-      Bleib Tapfer
-    </button>
-  </div>
-  <div>
-    <button ion-button  (click)="pushPage('informationsbeschaffung')" class ="informationsbeschaffung">
-      Informationsbeschaffung
-    </button>
-  </div>
-  <div>
-    <button ion-button (click)="pushPage('stellDirVor')" class="stellDirVor">
-      Stell dir vor
-    </button>
-  </div>
-  <div>
-    <button ion-button  (click)="pushPage('Arbeitsmittel')" class="Arbeitsmittel">
-      Arbeitsmittel
-    </button>
-  </div>
-  <div>
-    <button ion-button  (click)="pushPage('Perspektivwechsel')" class="Perspektivwechsel">
-      Perspektivwechsel
-    </button>
-  </div>
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button block (click)="showAll()" class="all">
+            Alle Karten
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button block (click)="pushPage('kommunikation')" class="kommunikation">
+          Kommunikation
+        </button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <button ion-button block (click)="pushPage('arbeitsplatz')" class="arbeitsplatz">
+            Arbeitsplatz
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button block (click)="pushPage('bleibTapfer')" class="bleibTapfer" >
+            Bleib Tapfer
+          </button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <button ion-button block (click)="pushPage('stellDirVor')" class="stellDirVor">
+            Stell dir vor
+          </button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <button ion-button  block (click)="pushPage('Arbeitsmittel')" class="Arbeitsmittel">
+            Arbeitsmittel
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
 
-  </ion-card-content>
-</ion-card>
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button block (click)="pushPage('informationsbeschaffung')" class ="informationsbeschaffung">
+            Informationsbeschaffung
+          </button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <button ion-button block  (click)="pushPage('Perspektivwechsel')" class="Perspektivwechsel">
+            Perspektivwechsel
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
