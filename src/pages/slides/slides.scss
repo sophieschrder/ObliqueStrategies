@@ -1,19 +1,72 @@
 page-slides {
-  ion-slide{
+
+  ion-slide {
     background: white;
+
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    border: 2px solid #ffcb05;
+  }
+
+  ion-icon {
+    font-size: 4em;
+    color: white;
+    padding: 0.4em;
+  }
+
+  .kommunikation {
+    background-color: $kommunikation;
+  }
+
+  .Arbeitsmittel {
+    background-color: $arbeitsmittel;
+  }
+
+  .arbeitsplatz {
+    background-color: $arbeitsplatz;
+  }
+  .bleibTapfer {
+    background-color: $bleibTapfer;
+  }
+
+  .informationsbeschaffung {
+    background-color: $informationsbeschaffung;
+  }
+
+  .Perspektivwechsel {
+    background-color: $perspektivwechsel;
+  }
+
+  .stellDirVor {
+    background-color: $stellDirVor;
+  }
+
+  .joker {
+    background-color: $joker;
   }
 
   h2 {
     font-weight: normal;
     color: #ffcb05;
+
   }
 
-  p {
+  h3 {
+
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin: 5px;
+  }
+
+  p.card-category {
     font-weight: lighter;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    vertical-align: top;
   }
-
 }
+
+
+

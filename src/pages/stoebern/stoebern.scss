@@ -1,3 +1,106 @@
 page-stoebern {
 
+
+p {
+  font-size: 18px;
+}
+  .kommunikation:hover {
+    background-color: $kommunikation-hover !important;
+  }
+
+  .Arbeitsmittel:hover {
+    background-color: $arbeitsmittel-hover !important;
+  }
+
+  .arbeitsplatz:hover {
+    background-color: $arbeitsplatz-hover !important;
+    color: white;
+  }
+
+  .bleibTapfer:hover {
+    background-color: $bleibTapfer-hover !important;
+
+  }
+
+  .informationsbeschaffung:hover {
+    background-color: $informationsbeschaffung-hover !important;
+  }
+
+  .Perspektivwechsel:hover {
+    background-color: $perspektivwechsel-hover !important;
+    color: white;
+  }
+
+  .stellDirVor:hover {
+    background-color: $stellDirVor-hover !important;
+    color: white;
+  }
+
+
+  .all:hover {
+    background-color: #777777 !important;
+  }
+
+  button.kommunikation {
+    background-color: $kommunikation;
+    color: white;
+    height: 5em;
+    padding: 3px;
+
+  }
+
+  button.Arbeitsmittel {
+    background-color: $arbeitsmittel;
+    color: white;
+    height: 5em;
+    padding: 3px;
+
+  }
+
+  button.arbeitsplatz {
+    background-color: $arbeitsplatz;
+    color: white;
+    height: 5em;
+    padding: 3px;
+  }
+  button.bleibTapfer {
+    background-color: $bleibTapfer;
+    color: white;
+    height: 5em;
+    padding: 3px;
+  }
+
+  button.informationsbeschaffung {
+    background-color: $informationsbeschaffung;
+    color: white;
+    height: 5em;
+    padding: 3px;
+  }
+
+  button.Perspektivwechsel {
+    background-color: $perspektivwechsel;
+    color: white;
+    height: 5em;
+    padding: 3px;
+  }
+
+  button.stellDirVor {
+    background-color: $stellDirVor;
+    color: white;
+    height: 5em;
+    padding: 3px;
+  }
+
+
+  button.all {
+    background-color: darkgrey;
+    color: white;
+    padding: 3px;
+    height: 5em;
+  }
+
+  ion-icon {
+    color: white;
+  }
+
 }
