@@ -22,7 +22,16 @@
 
 *{
   font-family: Marvel;
+
+  ion-header ion-icon.back-button-icon.icon {
+    color: #222;
+  }
+  ion-header ion-icon.bar-button-icon.icon {
+    color: #222;
+  }
+
 }
+
 
 //Card-Colors
 
