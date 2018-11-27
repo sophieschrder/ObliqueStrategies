@@ -7,7 +7,7 @@ Die App lässt den User zufällige Karte ziehen und in Form einer Herausforderun
 •	Cordova 4.5.5
 •	Angular 5.2.11
 # Building
-1.	make a fresh clone (recommended)
+1.	make a fresh clone (masterdev branch)
 2.	npm i 
 3.	ionic serve
 # From Developers
