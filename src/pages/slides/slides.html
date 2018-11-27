@@ -15,10 +15,11 @@
   <ion-slides pager loop="true" >
     <ion-slide *ngFor="let card of cards" ngClass="{{card.category}}">
       <p class="card-category"><b>{{card.category}}</b></p>
-     <ion-icon name="images"></ion-icon>
+     <ion-icon name={{card.img}}></ion-icon>
       <h3>{{card.text}}</h3>
 </ion-slide>
   </ion-slides>
 </ion-content>
+
 
 
