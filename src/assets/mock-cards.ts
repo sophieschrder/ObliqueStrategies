@@ -49,7 +49,7 @@ export const CARDS: Card[] = [
   },
   { id: 12, title: 'andererRaum', category: "arbeitsplatz",
     text: "Arbeite einen Tag lang in einem anderen Raum",
-    img: "door", history: ['02-1-2018', "06-2-2018"],
+    img: "briefcase", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 13, title: 'rausAusBuero', category: "arbeitsplatz",
     text: "Raus aus dem Büro! (kein Homeoffice)",
@@ -124,7 +124,7 @@ export const CARDS: Card[] = [
   { id: 31, title: 'sprache', category: "Arbeitsmittel",
     text: "Ändere die Sprache deiner Tastatur",
     img: "settings", history: ['02-1-2018', "06-2-2018"]
-  }
+  },
   { id: 31, title: 'progsprache', category: "Arbeitsmittel",
     text: "Arbeite in einer anderen Programmiersprache",
     img: "quote", history: ['02-1-2018', "06-2-2018"]
