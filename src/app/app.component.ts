@@ -9,6 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {StoebernPage} from "../pages/stoebern/stoebern";
 import {AboutPage} from "../pages/about/about";
+import {KarteZiehenPage} from "../pages/karte-ziehen/karte-ziehen";
 
 
 @Component({
@@ -33,7 +34,8 @@ export class MyApp {
       { title: 'Startseite', component: StartPage },
       { title: 'Stöbern', component: StoebernPage},
       { title: 'Meine Spielhistorie', component: HistoriePage},
-      { title: 'About', component: AboutPage}
+      { title: 'About', component: AboutPage},
+      { title: 'Karte ziehen', component: KarteZiehenPage}
     ];
   }
 
