@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Card} from "../../cards";
-import {SlidesPage} from "../slides/slides";
 import {CardServiceProvider} from "../../providers/card-service/card-service";
 
 /**
@@ -19,18 +18,16 @@ import {CardServiceProvider} from "../../providers/card-service/card-service";
 export class KarteZiehenPage {
 
   cards: Array<Card>;
+  card: Card;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider) {
-    this.cards = this.myCardsService.getCards();
+    this.cards=  this.myCardsService.getCards()
+    let i= Math.floor(Math.random()*this.cards.length);
+    this.card = this.cards[i];
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad KarteZiehenPage');
   }
-  getPage()
-  {
-    let i= Math.floor(Math.random()*this.cards.length);
-    this.navCtrl.push(SlidesPage,{
-      cards: this.cards.filter(card => card.id == i)});
-  }
+
 }

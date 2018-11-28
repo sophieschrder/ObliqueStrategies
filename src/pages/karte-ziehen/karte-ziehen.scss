@@ -1,3 +1,70 @@
 page-karte-ziehen {
 
+  ion-slide {
+    background: white;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  ion-icon {
+    font-size: 4em;
+    color: white;
+    padding: 0.4em;
+    z-index: 1 !important ;
+  }
+
+  .kommunikation {
+    background-color: $kommunikation;
+  }
+
+  .Arbeitsmittel {
+    background-color: $arbeitsmittel;
+  }
+
+  .arbeitsplatz {
+    background-color: $arbeitsplatz;
+  }
+  .bleibTapfer {
+    background-color: $bleibTapfer;
+  }
+
+  .informationsbeschaffung {
+    background-color: $informationsbeschaffung;
+  }
+
+  .Perspektivwechsel {
+    background-color: $perspektivwechsel;
+  }
+
+  .stellDirVor {
+    background-color: $stellDirVor;
+  }
+
+  .joker {
+    background-color: $joker;
+  }
+
+  h2 {
+    font-weight: normal;
+    color: #ffcb05;
+
+  }
+
+  h3 {
+
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    margin: 5px;
+  }
+
+  p.card-category {
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    vertical-align: top;
+  }
 }
