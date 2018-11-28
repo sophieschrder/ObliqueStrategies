@@ -12,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {StoebernPage} from "../pages/stoebern/stoebern";
 import {AboutPage} from "../pages/about/about";
 import { CardServiceProvider } from '../providers/card-service/card-service';
+import {KarteZiehenPage} from "../pages/karte-ziehen/karte-ziehen";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CardServiceProvider } from '../providers/card-service/card-service';
     SlidesPage,
     HistoriePage,
     StoebernPage,
-    AboutPage
+    AboutPage,
+    KarteZiehenPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { CardServiceProvider } from '../providers/card-service/card-service';
     HistoriePage,
     StoebernPage,
     SlidesPage,
-    AboutPage
+    AboutPage,
+    KarteZiehenPage
   ],
   providers: [
     StatusBar,

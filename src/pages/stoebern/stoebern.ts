@@ -27,7 +27,7 @@ export class StoebernPage {
     // causing the nav controller to transition
     // to the new page
     // optional data can also be passed to the pushed page.
-    this.navCtrl.push(SlidesPage,{
+      this.navCtrl.push(SlidesPage,{
       cards: this.cards.filter(card => card.category == selection)});
     }
 
