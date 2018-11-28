@@ -32,10 +32,10 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'Startseite', component: StartPage },
+      { title: 'Spielen', component: KarteZiehenPage},
       { title: 'Stöbern', component: StoebernPage},
       { title: 'Meine Spielhistorie', component: HistoriePage},
-      { title: 'About', component: AboutPage},
-      { title: 'Karte ziehen', component: KarteZiehenPage}
+      { title: 'About', component: AboutPage}
     ];
   }
 
