@@ -20,19 +20,20 @@ export class KarteZiehenPage {
 
   cards: Array<Card>;
   card: Card;
+  playCounter: number = 0;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider, public alertCtrl: AlertController) {
     this.cards=  this.myCardsService.getCards();
     this.getCard();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad KarteZiehenPage');
-  }
+  ionViewDidLoad() { }
+
   getCard()
   {
     let i= Math.floor(Math.random()*this.cards.length);
     this.card = this.cards[i];
+    this.playCounter += 1;
   }
   showAlert() {
     const alert = this.alertCtrl.create({
