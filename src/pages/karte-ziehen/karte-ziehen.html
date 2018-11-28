@@ -18,15 +18,22 @@
 
 <ion-content padding>
   <ion-slides>
-  <ion-slide ngClass="{{card.category}}">
-    <p class="card-category"><b>{{card.category}}</b></p>
-    <ion-icon name={{card.img}}></ion-icon>
-    <h3>{{card.text}}</h3>
-  </ion-slide>
+    <ion-slide ngClass="{{card.category}}">
+      <p class="card-category"><b>{{card.category}}</b></p>
+      <ion-icon name={{card.img}}></ion-icon>
+      <h3>{{card.text}}</h3>
+    </ion-slide>
   </ion-slides>
-  <div>
-  <button ion-button icon-only block >
-    <p>neue Karte</p>
-  </button>
-</div>
+  <div class="row">
+    <div class="col col-50">
+      <button ion-button icon-only block (click)="getCard()">
+        <p>Neue Karte</p>
+      </button>
+    </div>
+    <div class="col col-50">
+      <button ion-button icon-only block (click)="showAlert()">
+        <p>Karte annehmen</p>
+      </button>
+    </div>
+  </div>
 </ion-content>
