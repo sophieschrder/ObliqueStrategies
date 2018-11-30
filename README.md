@@ -6,9 +6,11 @@ Die App lässt den User zufällige Karte ziehen und in Form einer Herausforderun
 •	Ionic 4.15.0
 •	Cordova 4.5.5
 •	Angular 5.2.11
-# Building
+# App ausprobieren (Web)
 1.	make a fresh clone (masterdev branch)
-2.	npm i 
+2.	npm install
 3.	ionic serve
+# App emmulieren (Xcode and Android Studio)
+
 # From Developers
 Entwickelt von den HTW Berlin Studentinnen in Rahmen eines Studienprojekts
