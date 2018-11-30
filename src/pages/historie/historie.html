@@ -17,5 +17,7 @@
 
 
 <ion-content padding>
-
+ <button ion-button color="secondary" (click)="showHistory()">Gespielte Ids</button>
+  <button ion-button color="danger" (click)="clearHistory()">Historie entfernen</button>
+  <div>{{history}}</div>
 </ion-content>
