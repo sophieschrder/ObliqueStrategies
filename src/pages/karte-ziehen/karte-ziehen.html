@@ -17,23 +17,30 @@
 
 
 <ion-content padding>
-  <ion-slides>
-    <ion-slide ngClass="{{card.category}}">
+  <ion-card>
+<ion-grid>
+  <ion-row class="card">
+    <ion-col class="card">
+    <ion-card-content ngClass="{{card.category}}">
       <p class="card-category"><b>{{card.category}}</b></p>
-      <ion-icon name={{card.img}}></ion-icon>
+      <ion-icon class="play" name={{card.img}}></ion-icon>
       <h3>{{card.text}}</h3>
-    </ion-slide>
-  </ion-slides>
-  <div class="row">
-    <div class="col col-50">
-      <button *ngIf="playCounter < 3" ion-button icon-only block (click)="getCard()">
+    </ion-card-content>
+    </ion-col>
+  </ion-row>
+<ion-row>
+  <ion-col>
+      <button *ngIf="playCounter < 3" class ="new" ion-button icon-only block (click)="getCard()">
         <p>Neue Karte</p>
       </button>
-    </div>
-    <div class="col col-50">
-      <button ion-button icon-only block (click)="acceptCard()">
+  </ion-col>
+  <ion-col>
+      <button ion-button icon-only block class="accept" (click)="acceptCard()">
         <p>Karte annehmen</p>
       </button>
-    </div>
-  </div>
+  </ion-col>
+</ion-row>
+
+    </ion-grid>
+  </ion-card>
 </ion-content>

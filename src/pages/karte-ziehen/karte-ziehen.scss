@@ -1,17 +1,29 @@
 page-karte-ziehen {
 
-  ion-slide {
-    background: white;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+
+  ion-card {
+    height: 90%;
+    text-align: center;
   }
 
-  ion-icon {
-    font-size: 4em;
+ion-card-content {
+  height: 27em;
+}
+  .card-md h3 {
+    font-size: 25px;
+    margin-top: 2em;
+  }
+
+  .card-md p {
     color: white;
-    padding: 0.4em;
-    z-index: 1 !important ;
+    font-weight: bold;
+  }
+  ion-icon.play {
+    font-size: 6em;
+    color: white;
+    margin-top: 0.5em !important;
+    padding: auto;
+    text-align: justify !important;
   }
 
   .kommunikation {
@@ -53,8 +65,8 @@ page-karte-ziehen {
 
   h3 {
 
-    color: white;
-    font-size: 2em;
+    color: white !important;
+    font-size: 5em;
     text-align: center;
     margin: 5px;
   }
@@ -64,6 +76,18 @@ page-karte-ziehen {
     color: white;
     text-align: center;
     font-size: 1.5em;
-    vertical-align: top;
+    vertical-align: top !important;
   }
+
+  button.new {
+    background-color: #414141;
+    height: 5em;
+  }
+
+
+  button.accept {
+    background-color: #414141;
+    height: 5em;
+  }
+
 }
