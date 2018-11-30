@@ -2,6 +2,7 @@ page-stoebern {
 
 p {
   font-size: 18px;
+  text-align: justify;
 }
   .kommunikation:hover {
     background-color: $kommunikation-hover !important;
@@ -44,15 +45,14 @@ p {
     background-color: $kommunikation;
     color: white;
     height: 5em;
-    padding: 3px;
-
+    font-size: 20px;
   }
 
   button.Arbeitsmittel {
     background-color: $arbeitsmittel;
     color: white;
     height: 5em;
-    padding: 3px;
+    font-size: 20px;
 
   }
 
@@ -60,42 +60,36 @@ p {
     background-color: $arbeitsplatz;
     color: white;
     height: 5em;
-    padding: 3px;
+    font-size: 20px;
   }
   button.bleibTapfer {
     background-color: $bleibTapfer;
     color: white;
     height: 5em;
-    padding: 3px;
+    font-size: 20px;
   }
 
   button.informationsbeschaffung {
     background-color: $informationsbeschaffung;
     color: white;
     height: 5em;
-    padding: 3px;
+    font-size: 20px;
   }
 
   button.Perspektivwechsel {
     background-color: $perspektivwechsel;
     color: white;
     height: 5em;
-    padding: 3px;
-  }
-
-  button.stellDirVor {
-    background-color: $stellDirVor;
-    color: white;
-    height: 5em;
-    padding: 3px;
+    font-size: 20px;
   }
 
 
   button.all {
     background-color: darkgrey;
     color: white;
-    padding: 3px;
-    height: 5em;
+    height: 3em;
+    font-size: 20px;
+    font-weight: bold;
   }
 
   ion-icon {
