@@ -19,50 +19,45 @@ import {CardServiceProvider} from "../../providers/card-service/card-service";
 export class HistoriePage {
   history: number[];
 
-  /** speichert alle IDs defr Cards in der Historie */
+  /** speichert alle IDs der gespielten karten in der Historie */
   ids: number[];
   
-  /** speichert eine Referenz auf alle Cards */
+  /** speichert alle Karten */
   cards: Array<Card>;
   
-  /** die Cards aus der ID Liste */
+  /** speichert alle gespielten Karten */
   cardHistory: Array<Card> = new Array<Card>();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider, private storage: Storage) {
     this.cards = this.myCardsService.getCards();
   }
 
-  /**
-   * wird aufgerufen, wenn diese Seite dargestellt werden soll.
-   */
   ionViewDidLoad() {
-    // laden der Historie als JSON string (wird in data gespeichert)
+    // laden der Historie als JSON string (wird mit data ausgelesen)
     this.storage.get('history').then( ( data ) => {
       // aus der JSON historie ein ARRAY von OBJECTS machen
-      this.ids = JSON.parse( data )
+      this.ids = JSON.parse(data);
+      if (data == undefined) {
+        console.log("data for Cardhistory undefined");
+      }else {
         // erzeuge cardHIstory für jede ID in ids
         for (let i = 0; i < this.ids.length; i++) {
           // id aus IDs holen
           const id: number = Number(this.ids[i]);
-          // aus cards die karte mit ID=id suchen
+          // aus cards die karte mit genannter Id suchen
           for (let c = 0; c < this.cards.length; c++) {
-            const card: Card = this.cards[c];
-            if (card.id == id) {
-              // karte gefunden, in history kopieren
-              this.cardHistory.push(card);
-              // aufhören
-              //break;
+            if (this.cards[c].id == id) {
+              // karte gefunden, in cardHistory array kopieren
+              this.cardHistory.push(this.cards[c]);
             }
           }
         }
-
-    }); 
-    console.log('ionViewDidLoad HistoriePage');
+      }
+    });
   }
 
   public async showHistory(){
     this.history= await this.storage.get('history');
-    console.log(this.history);
   }
 
   public clearHistory(){
