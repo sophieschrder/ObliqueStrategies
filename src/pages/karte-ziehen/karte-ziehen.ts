@@ -22,7 +22,7 @@ export class KarteZiehenPage {
   cards: Array<Card>;
   card: Card;
   playCounter: number = 0;
-  cardHistory: number[] ;
+  cardHistory: number[] = [];
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider, public alertCtrl: AlertController,
   private storage: Storage) {
@@ -41,14 +41,13 @@ export class KarteZiehenPage {
 
    async acceptCard(){
      this.showAlert();
-     this.storage.get('history').then((historie) => {
-       this.cardHistory = JSON.parse(historie) || [];
-       this.cardHistory.push(this.card.id);
-       return this.storage.set('history', JSON.stringify(this.cardHistory));
-     });
+     /*this.storage.get('history').then((historie) => {
+       this.cardHistory = historie;
+     });*/
+     //this.cardhistory= await this.storage.get('history');
+     this.cardHistory.push(this.card.id);
+     return this.storage.set('history', JSON.stringify(this.cardHistory));
   }
-
-
 
   showAlert() {
     const alert = this.alertCtrl.create({
