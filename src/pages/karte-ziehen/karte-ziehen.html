@@ -29,7 +29,7 @@
   </ion-slides>
       </ion-col>
     </ion-row>
-  <ion-row>
+  <ion-row *ngIf="showButtons">
     <ion-col>
       <button *ngIf="playCounter < 3" ion-button icon-only block (click)="getCard()">
         <p>Neue Karte</p>
