@@ -23,6 +23,7 @@ export class KarteZiehenPage {
   card: Card;
   playCounter: number = 0;
   cardHistory: number[];
+  showButtons: boolean = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider, public alertCtrl: AlertController,
   private storage: Storage) {
@@ -40,6 +41,7 @@ export class KarteZiehenPage {
   }
 
    async acceptCard(){
+    this.showButtons=false;
      this.showAlert();
      this.storage.get('history').then((historie) => {
        this.cardHistory = JSON.parse(historie) || [];
