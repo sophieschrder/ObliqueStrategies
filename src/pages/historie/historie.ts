@@ -17,7 +17,7 @@ import {CardServiceProvider} from "../../providers/card-service/card-service";
   templateUrl: 'historie.html',
 })
 export class HistoriePage {
-  // history: number[];
+  history: number[];
 
   /** speichert alle IDs defr Cards in der Historie */
   ids: Array<object>;
@@ -53,7 +53,7 @@ export class HistoriePage {
             // karte gefunden, in history kopieren 
             this.cardHistory.push( card );
             // aufhören
-            break;
+            //break;
           }
         }
       }
@@ -63,8 +63,8 @@ export class HistoriePage {
   }
 
   public async showHistory(){
-    // this.history = await this.storage.get('history');
-    // console.log(this.history);
+    this.history= await this.storage.get('history');
+    console.log(this.history);
   }
 
   public clearHistory(){
