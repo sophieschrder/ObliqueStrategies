@@ -40,14 +40,10 @@ export class HistoriePage {
     this.storage.get('history').then( ( data ) => {
       // aus der JSON historie ein ARRAY von OBJECTS machen
       this.ids = JSON.parse( data )
-      if(this.ids == undefined){
-        console.log("noch keine Historie");
-      }else {
         // erzeuge cardHIstory für jede ID in ids
         for (let i = 0; i < this.ids.length; i++) {
           // id aus IDs holen
           const id: number = Number(this.ids[i]);
-
           // aus cards die karte mit ID=id suchen
           for (let c = 0; c < this.cards.length; c++) {
             const card: Card = this.cards[c];
@@ -59,7 +55,7 @@ export class HistoriePage {
             }
           }
         }
-      }
+
     }); 
     console.log('ionViewDidLoad HistoriePage');
   }
