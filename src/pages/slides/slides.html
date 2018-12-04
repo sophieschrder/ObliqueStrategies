@@ -8,21 +8,13 @@
 </ion-navbar>
 </ion-header>
 
-<head>
-  <title>Google Icons</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
 
 
 <ion-content padding>
   <ion-slides pager loop="true" >
     <ion-slide *ngFor="let card of cards" ngClass="{{card.category}}">
       <p class="card-category"><b>{{card.category}}</b></p>
-
-      <i class="material-icons" style="font-size:70px; color:white">{{card.img}}</i>
-
-
+      <ion-icon name={{card.img}}></ion-icon>
       <h3>{{card.text}}</h3>
     </ion-slide>
   </ion-slides>
