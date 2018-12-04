@@ -27,10 +27,8 @@
       <h3>{{card.text}}</h3>
     </ion-slide>
   </ion-slides>
-      </ion-col>
-    </ion-row>
-   <ion-row>
-     <ion-col>
+  <div class="row" *ngIf="showButtons">
+    <div class="col col-50">
       <button *ngIf="playCounter < 3" ion-button icon-only block (click)="getCard()">
         <p>Neue Karte</p>
       </button>

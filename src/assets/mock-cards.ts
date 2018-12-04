@@ -1,5 +1,4 @@
 import {Card} from "../cards";
-
 export const CARDS: Card[] = [
   { id: 1, title: 'ausserHaus', category: "kommunikation",
     text: "Gehe aus dem Haus und spreche mit Menschen über dein Produkt",
@@ -93,8 +92,8 @@ export const CARDS: Card[] = [
     text: "Suche einen Tag lang Lösungen nicht im Internet sondern frage Kollegen oder Bücher um Rat",
     img: "person", history: ['02-1-2018', "06-2-2018"],
   },
-  { id: 24, title: 'slackAtack', category: "joker",
-    text: "Slack-Atack",
+  { id: 24, title: 'slackAttack', category: "joker",
+    text: "Slack-Attack",
     img: "trophy", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 25, title: 'mittagessen', category: "Perspektivwechsel",
