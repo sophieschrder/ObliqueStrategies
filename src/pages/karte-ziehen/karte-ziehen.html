@@ -17,6 +17,9 @@
 
 
 <ion-content padding>
+  <ion-grid>
+    <ion-row class="slider">
+      <ion-col>
   <ion-slides>
     <ion-slide ngClass="{{card.category}}">
       <p class="card-category"><b>{{card.category}}</b></p>
@@ -29,11 +32,12 @@
       <button *ngIf="playCounter < 3" ion-button icon-only block (click)="getCard()">
         <p>Neue Karte</p>
       </button>
-    </div>
-    <div class="col col-50">
+     </ion-col>
+  <ion-col>
       <button ion-button icon-only block (click)="acceptCard()">
         <p>Karte annehmen</p>
       </button>
-    </div>
-  </div>
+     </ion-col>
+   </ion-row>
+ </ion-grid>
 </ion-content>

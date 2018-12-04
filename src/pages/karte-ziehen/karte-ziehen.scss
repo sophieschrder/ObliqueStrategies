@@ -6,14 +6,29 @@ page-karte-ziehen {
 
     ion-slides {
       display: flex;
+      border-radius: 10px !important;
+      overflow:hidden !important;
     }
   }
+  ion-grid {
+    height: 100%;
+  }
 
+  ion-row.slider {
+    height: 90%;
+  }
+
+  ion-col.col {
+    height: 100%;
+  }
   ion-slide {
     background: white;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    border-radius: 10px !important;
+    overflow:hidden !important;
+
   }
 
   ion-icon {
@@ -65,7 +80,7 @@ page-karte-ziehen {
     color: white;
     font-size: 2em;
     text-align: center;
-    margin: 5px;
+    margin: 15px;
   }
 
   p.card-category {
@@ -75,4 +90,14 @@ page-karte-ziehen {
     font-size: 1.5em;
     vertical-align: top;
   }
+
+  p {
+    font-weight: bold;
+    font-size: 18px;
+  }
+.button-md {
+  height: 5em;
+  border-radius: 5px;
+  background-color: #414141;
+}
 }
