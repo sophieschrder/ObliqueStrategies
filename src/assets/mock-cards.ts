@@ -11,12 +11,10 @@ export const CARDS: Card[] = [
   { id: 3, title: 'nichtchatten', category: "kommunikation",
     text: "Kommuniziere ohne Chat und Email",
     img: "mail", history: ['02-1-2018', "06-2-2018"],
-
   },
   { id: 4, title: 'spaziergang', category: "kommunikation",
     text: "Mache einen Spaziergang mit einem Kollegen",
     img: "walk", history: ['02-1-2018', "06-2-2018"],
-
   },
   { id: 5, title: 'englisch', category: "kommunikation",
     text: "Sprich nur Englisch",
@@ -61,7 +59,6 @@ export const CARDS: Card[] = [
   { id: 15, title: 'tauschen', category: "bleibTapfer",
     text: "Lösche alles, was du gestern entwickelt hast und schreibe es neu",
     img: "trash", history: ['02-1-2018', "06-2-2018"],
-
   },
   { id: 16, title: 'tauschen', category: "bleibTapfer",  //
     text: "Lasse den Fenstermanager zu und erledige alles über die Konsole",
@@ -70,7 +67,6 @@ export const CARDS: Card[] = [
   { id: 17, title: 'tauschen', category: "bleibTapfer",
     text: "Arbeite einen Tag lang ohne IDE, nur mit Texteditor und Shell",
     img: "brush", history: ['02-1-2018', "06-2-2018"],
-
   },
   { id: 18, title: 'tauschen', category: "bleibTapfer",
     text: "Trinke einen Tag lang keinen Kaffee/Tee",
@@ -161,5 +157,3 @@ export const CARDS: Card[] = [
     img: "quote", history: ['02-1-2018', "06-2-2018"]
   }
 ];
-
-

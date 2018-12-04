@@ -1,5 +1,14 @@
 page-karte-ziehen {
 
+  .scroll-content {
+    display: flex;
+    flex-direction: column;
+
+    ion-slides {
+      display: flex;
+    }
+  }
+
   ion-slide {
     background: white;
     background-position: center;
