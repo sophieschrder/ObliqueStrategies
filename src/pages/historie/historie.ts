@@ -33,22 +33,15 @@ export class HistoriePage {
   }
 
   ionViewDidLoad() {
-    // laden der Historie als JSON string (wird mit data ausgelesen)
     this.storage.get('history').then( ( data ) => {
-      // aus der JSON historie ein ARRAY von OBJECTS machen
       this.ids = JSON.parse(data);
       if (data == undefined) {
         console.log("data for Cardhistory undefined");
       }else {
-        // erzeuge cardHIstory für jede ID in ids
         for (let i = 0; i < this.ids.length; i++) {
-          // id aus IDs holen
-          const id: number = Number(this.ids[i]);
-          // aus cards die karte mit genannter Id suchen
           for (let c = 0; c < this.cards.length; c++) {
-            if (this.cards[c].id == id) {
-              // karte gefunden, in cardHistory array kopieren
-              this.cardHistory.push(this.cards[c]);
+            if (this.cards[c].id ==  this.ids[i]) {
+              this.cardHistory.unshift(this.cards[c]);
             }
           }
         }
