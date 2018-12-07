@@ -4,6 +4,7 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { StartPage } from '../pages/start/start';
 import { HistoriePage} from "../pages/historie/historie";
+import { SettingsPage} from "../pages/settings/settings";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -11,6 +12,7 @@ import {StoebernPage} from "../pages/stoebern/stoebern";
 import {AboutPage} from "../pages/about/about";
 import {KarteZiehenPage} from "../pages/karte-ziehen/karte-ziehen";
 import {Storage} from "@ionic/storage";
+
 
 
 
@@ -39,6 +41,7 @@ export class MyApp {
       {title: 'Spielen', component: KarteZiehenPage},
       {title: 'Stöbern', component: StoebernPage},
       {title: 'Meine Spielhistorie', component: HistoriePage},
+      {title: 'Einstellungen', component: SettingsPage},
       {title: 'About', component: AboutPage}
     ];
   }
@@ -60,6 +63,7 @@ export class MyApp {
     this.nav.setRoot(page.component);
   }
 
+  //Move rootpage to history if app has been played once
   setRootPage() {
     this.storage.get("history").then((history) => {
       if (history) {

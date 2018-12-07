@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Einstellungen</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button color="secondary" (click)="showHistory()">Gespielte Ids</button>
+  <button ion-button color="danger" (click)="clearHistory()">Historie entfernen</button>
+  <div>{{history}}</div>
+</ion-content>

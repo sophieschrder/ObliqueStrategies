@@ -7,6 +7,7 @@ import { IonicStorageModule} from "@ionic/storage";
 import { StartPage } from '../pages/start/start';
 import {SlidesPage} from "../pages/slides/slides";
 import {HistoriePage} from "../pages/historie/historie";
+import {SettingsPage} from "../pages/settings/settings";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,7 +25,8 @@ import {KarteZiehenPage} from "../pages/karte-ziehen/karte-ziehen";
     HistoriePage,
     StoebernPage,
     AboutPage,
-    KarteZiehenPage
+    KarteZiehenPage,
+    SettingsPage
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import {KarteZiehenPage} from "../pages/karte-ziehen/karte-ziehen";
     StoebernPage,
     SlidesPage,
     AboutPage,
-    KarteZiehenPage
+    KarteZiehenPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,

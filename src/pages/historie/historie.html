@@ -15,9 +15,6 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button color="secondary" (click)="showHistory()">Gespielte Ids</button>
-  <button ion-button color="danger" (click)="clearHistory()">Historie entfernen</button>
-  <div>{{history}}</div>
   <ion-content padding>
     <ion-slides pager loop="true" >
       <ion-slide *ngFor="let card of cardHistory" ngClass="{{card.category}}">

@@ -17,7 +17,6 @@ import {CardServiceProvider} from "../../providers/card-service/card-service";
   templateUrl: 'historie.html',
 })
 export class HistoriePage {
-  history: number[];
 
   /** speichert alle IDs der gespielten karten in der Historie */
   ids: number[];
@@ -49,12 +48,5 @@ export class HistoriePage {
     });
   }
 
-  public async showHistory(){
-    this.history= await this.storage.get('history');
-  }
-
-  public clearHistory(){
-    this.storage.clear().then(() => {console.log('Historie entfernt')});
-  }
 
 }
