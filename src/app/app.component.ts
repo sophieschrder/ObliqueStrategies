@@ -4,10 +4,16 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { StartPage } from '../pages/start/start';
 import { HistoriePage} from "../pages/historie/historie";
+import { SettingsPage} from "../pages/settings/settings";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {SlidesPage} from "../pages/slides/slides";
+import {StoebernPage} from "../pages/stoebern/stoebern";
+import {AboutPage} from "../pages/about/about";
+import {KarteZiehenPage} from "../pages/karte-ziehen/karte-ziehen";
+import {Storage} from "@ionic/storage";
+
+
 
 
 @Component({
@@ -16,22 +22,27 @@ import {SlidesPage} from "../pages/slides/slides";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   // make HelloIonicPage the root (or first) page
-  rootPage = StartPage;
-  pages: Array<{title: string, component: any}>;
+  rootPage: any;
+  pages: Array<{ title: string, component: any }>;
+
 
   constructor(
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private storage: Storage,
   ) {
     this.initializeApp();
 
     // set our app's pages
     this.pages = [
-      { title: 'Startseite', component: StartPage },
-      { title: 'Stöbern', component: SlidesPage},
-      { title: 'Meine Spielhistorie', component: HistoriePage}
+      {title: 'Startseite', component: StartPage},
+      {title: 'Spielen', component: KarteZiehenPage},
+      {title: 'Stöbern', component: StoebernPage},
+      {title: 'Meine Spielhistorie', component: HistoriePage},
+      {title: 'Einstellungen', component: SettingsPage},
+      {title: 'About', component: AboutPage}
     ];
   }
 
@@ -41,6 +52,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.setRootPage();
     });
   }
 
@@ -49,5 +61,16 @@ export class MyApp {
     this.menu.close();
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
+  }
+
+  //Move rootpage to history if app has been played once
+  setRootPage() {
+    this.storage.get("history").then((history) => {
+      if (history) {
+        this.rootPage = HistoriePage;
+      } else {
+        this.rootPage = StartPage;
+      }
+    });
   }
 }

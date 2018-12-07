@@ -1,6 +1,5 @@
 // http://ionicframework.com/docs/theming/
 
-
 // App Global Sass
 // --------------------------------------------------
 // Put style rules here that you want to apply globally. These
@@ -14,3 +13,42 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+
+@font-face{
+  font-family: Marvel;
+  src: url('../assets/fonts/Marvel/Marvel-Regular.ttf')
+}
+
+*{
+  font-family: Marvel;
+
+  ion-header ion-icon.back-button-icon.icon {
+    color: #222;
+  }
+  ion-header ion-icon.bar-button-icon.icon {
+    color: #222;
+  }
+
+}
+
+
+//Card-Colors
+
+$kommunikation:    #46577B;
+$kommunikation-hover: #79a1db;
+$arbeitsmittel:   #550C35;
+$arbeitsmittel-hover: #db1d8b;
+$arbeitsplatz: #98201A;
+$arbeitsplatz-hover: #db2822;
+$bleibTapfer: #106146;
+$bleibTapfer-hover: #21db9c;
+$informationsbeschaffung: #D27618;
+$informationsbeschaffung-hover: #fd9c18;
+$perspektivwechsel: #102326;
+$perspektivwechsel-hover: #346c78;
+$stellDirVor: #D292AD;
+$stellDirVor-hover: #fdd2eb;
+$joker: #ffcb05;
+
+
