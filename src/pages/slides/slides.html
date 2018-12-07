@@ -11,7 +11,7 @@
 
 
 <ion-content padding>
-  <ion-slides pager loop="true" >
+  <ion-slides pager loop="true" effect="flip" >
     <ion-slide *ngFor="let card of cards" ngClass="{{card.category}}">
       <p class="card-category"><b>{{card.category}}</b></p>
       <ion-icon name={{card.img}}></ion-icon>
