@@ -2,6 +2,7 @@
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
+
     </button>
     <ion-title>Welcome</ion-title>
   </ion-navbar>
@@ -9,30 +10,47 @@
 
 
 <ion-content padding>
+  <div class="cont">
 
-  <h3> Welcome to QURIOSITY </h3>
-
-
-  <h5>
+  <h2> Welcome to QURIOSITY </h2>
+  <h4>
     <p>
-  Hier erwarten Dich 40 spannende und lustige Aufgaben, die Dich zum kreativen Arbeiten anregen. <br>
-  Du willst die Dir vorgeschlagene Aufgabe nicht machen?<br>
+  Hier erwarten Dich 40 spannende und lustige Aufgaben, die Dich
+      zum kreativen Arbeiten und zum Querdenken anregen.
+  Du willst die Dir vorgeschlagene Aufgabe nicht machen?
       Kein problem- Du kannst bis zu zweimal schieben, danach MUSST Du die Mission annehmen!!<br><br>
       Muhahahah- that´s the game dude.<br><br>
-  Öffnest Du die App erneut, so wird Dir Deine aktuelle Karte angezeigt.<br>
-  Hast Du die Aufgabe bereits beendet dann gehe<br>
-  über das Menu auf "Spielen" und Du erhälst eine neue Aufgabe.<br><br>
+  Öffnest Du die App erneut, so wird Dir Deine aktuelle Karte angezeigt.
+  Hast Du die Aufgabe bereits beendet dann gehe
+  über das Menu auf "Spielen" und Du erhälst eine neue Aufgabe.<br>
 
   HAVE FUN!
+
   </p>
-</h5>
+</h4>
 
   <p>
+    <!--
     <ion-buttons>
       <button ion-button (click)="goAnOtherPage()">LOS GEHTS</button>
     </ion-buttons>
+
+    <button ion-button icon-start (click)="goAnOtherPage()">
+      <ion-icon name="md-game-controller-a"></ion-icon>
+     LOS GEHTS
+    </button>
+
+    <button ion-button icon-only (click)="goAnOtherPage()">
+      <ion-icon name="md-game-controller-a"></ion-icon>
+    </button>
+-->
+
   </p>
 
+  </div>
+  <div class="ico">
+    <ion-icon name="md-game-controller-a" style="font-size: 150px;" (click)="goAnOtherPage()"></ion-icon>
+  </div>
 </ion-content>
 
 
