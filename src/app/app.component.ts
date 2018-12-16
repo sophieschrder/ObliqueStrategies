@@ -10,7 +10,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import {StoebernPage} from "../pages/stoebern/stoebern";
 import {AboutPage} from "../pages/about/about";
-import {KarteZiehenPage} from "../pages/karte-ziehen/karte-ziehen";
+import {SpielenPage} from "../pages/spielen/spielen";
 import {Storage} from "@ionic/storage";
 
 
@@ -38,7 +38,7 @@ export class MyApp {
     // set our app's pages
     this.pages = [
       {title: 'Startseite', component: StartPage},
-      {title: 'Spielen', component: KarteZiehenPage},
+      {title: 'Spielen', component: SpielenPage},
       {title: 'Stöbern', component: StoebernPage},
       {title: 'Meine Spielhistorie', component: HistoriePage},
       {title: 'Einstellungen', component: SettingsPage},

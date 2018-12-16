@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import  { KarteZiehenPage } from "../karte-ziehen/karte-ziehen";
+import  { SpielenPage } from "../spielen/spielen";
 import { NavController } from "ionic-angular";
 
 @Component({
@@ -10,8 +10,8 @@ export class StartPage {
 
   constructor(public navCtrl: NavController) {
   }
-
+//
   goAnOtherPage() {
-    this.navCtrl.setRoot(KarteZiehenPage);
+    this.navCtrl.setRoot(SpielenPage);
   }
 }

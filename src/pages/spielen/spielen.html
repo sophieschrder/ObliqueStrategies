@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu" color="dark"></ion-icon>
+    </button>
+    <ion-title>Spielen</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row class="slider">
+      <ion-col>
+        <ion-slides>
+          <ion-slide ngClass="{{card.category}}">
+            <p class="card-category"><b>{{card.category}}</b></p>
+            <ion-icon name={{card.img}}></ion-icon>
+            <h3>{{card.text}}</h3>
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="showButtons">
+      <ion-col>
+        <button *ngIf="playCounter < 3" ion-button icon-only block (click)="getCard()">
+          <p>Neue Karte</p>
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button icon-only block (click)="acceptCard()">
+          <p>Karte annehmen</p>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
