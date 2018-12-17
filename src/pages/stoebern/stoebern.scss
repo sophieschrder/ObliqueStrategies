@@ -1,8 +1,7 @@
 page-stoebern {
-ion-grid {
-  height: 100%;
-}
-
+  ion-grid {
+    height: 100%;
+  }
 
   .scroll-content {
     height: 90%;
@@ -42,7 +41,6 @@ ion-grid {
     background-color: $stellDirVor-hover !important;
     color: white;
   }
-
 
   .all:hover {
     background-color: #777777 !important;
@@ -90,7 +88,6 @@ ion-grid {
     font-size: 20px;
   }
 
-
   button.all {
     background-color: darkgrey;
     color: white;
@@ -102,7 +99,6 @@ ion-grid {
   ion-icon {
     color: white;
   }
-
 
 }
 

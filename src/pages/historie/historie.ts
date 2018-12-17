@@ -1,15 +1,9 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Card} from "../../cards";
-import { Storage } from "@ionic/storage";
+import {Storage} from "@ionic/storage";
 import {CardServiceProvider} from "../../providers/card-service/card-service";
 
-/**
- * Generated class for the HistoriePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -18,28 +12,30 @@ import {CardServiceProvider} from "../../providers/card-service/card-service";
 })
 export class HistoriePage {
 
-  /** speichert alle IDs der gespielten karten in der Historie */
+  /** alle IDs der bereits gespielten Karten*/
   ids: number[];
-  
-  /** speichert alle Karten */
+
+  /** alle Karten des Spiels*/
   cards: Array<Card>;
-  
-  /** speichert alle gespielten Karten */
+
+  /** alle bereits gespielten Karten */
   cardHistory: Array<Card> = new Array<Card>();
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider, private storage: Storage) {
     this.cards = this.myCardsService.getCards();
   }
 
+  /* Hier gibt es einen Abgleich der Ids aus der Historie mit den Karten.
+   Bereits gespielte Karten werden der Historie hinzugefügt */
   ionViewDidLoad() {
-    this.storage.get('history').then( ( data ) => {
+    this.storage.get('history').then((data) => {
       this.ids = JSON.parse(data);
       if (data == undefined) {
         console.log("data for Cardhistory undefined");
-      }else {
+      } else {
         for (let i = 0; i < this.ids.length; i++) {
           for (let c = 0; c < this.cards.length; c++) {
-            if (this.cards[c].id ==  this.ids[i]) {
+            if (this.cards[c].id == this.ids[i]) {
               this.cardHistory.unshift(this.cards[c]);
             }
           }
