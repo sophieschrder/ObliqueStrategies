@@ -46,7 +46,7 @@ export class SpielenPage {
       this.cardHistory = JSON.parse(historie) || [];
       this.totalCardsPlayed= this.cardHistory.length;
       console.log(this.totalCardsPlayed);
-      if(this.totalCardsPlayed === 5){
+      if(this.totalCardsPlayed === 2){
         this.navCtrl.push(Badge1Page,{cardsPlayed:this.totalCardsPlayed} );
       }
       this.cardHistory.push(this.card.id);
