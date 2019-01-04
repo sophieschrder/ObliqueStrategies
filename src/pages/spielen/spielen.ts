@@ -4,6 +4,7 @@ import {Card} from "../../cards";
 import {CardServiceProvider} from "../../providers/card-service/card-service";
 import {AlertController} from 'ionic-angular';
 import {Storage} from "@ionic/storage";
+import {Badge1Page} from "../badge1/badge1";
 
 
 @IonicPage()
@@ -18,6 +19,7 @@ export class SpielenPage {
   playCounter: number = 0;
   cardHistory: number[];
   showButtons: boolean = true;
+  totalCardsPlayed: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider, public alertCtrl: AlertController,
               private storage: Storage) {
@@ -39,8 +41,14 @@ export class SpielenPage {
   async acceptCard() {
     this.showButtons = false;
     this.showAlert();
+
     this.storage.get('history').then((historie) => {
       this.cardHistory = JSON.parse(historie) || [];
+      this.totalCardsPlayed= this.cardHistory.length;
+      console.log(this.totalCardsPlayed);
+      if(this.totalCardsPlayed === 5){
+        this.navCtrl.push(Badge1Page,{cardsPlayed:this.totalCardsPlayed} );
+      }
       this.cardHistory.push(this.card.id);
       return this.storage.set('history', JSON.stringify(this.cardHistory));
     });
