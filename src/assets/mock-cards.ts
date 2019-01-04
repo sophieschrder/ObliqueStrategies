@@ -2,13 +2,13 @@ import {Card} from "../cards";
 export const CARDS: Card[] = [
   { id: 1, title: 'ausserHaus', category: "kommunikation",
     text: "Gehe aus dem Haus und spreche mit Menschen über dein Produkt",
-    img: "chatbubbles", history: ['02-1-2018', "06-2-2018"],
+    img: "bug", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 2, title: 'chatten', category: "kommunikation",
     text: "Kommuniziere nur per Chat und Email",
-    img: "mail", history: ['02-1-2018', "06-2-2018"],
-  },
-  { id: 3, title: 'nichtchatten', category: "kommunikation",
+    img: "bug", history: ['02-1-2018', "06-2-2018"],
+  } ]
+ /* { id: 3, title: 'nichtchatten', category: "kommunikation",
     text: "Kommuniziere ohne Chat und Email",
     img: "mail", history: ['02-1-2018', "06-2-2018"],
   },
@@ -157,3 +157,4 @@ export const CARDS: Card[] = [
     img: "quote", history: ['02-1-2018', "06-2-2018"]
   }
 ];
+*/
