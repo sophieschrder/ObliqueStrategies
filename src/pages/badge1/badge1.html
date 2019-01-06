@@ -1,13 +1,13 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  Du hast dir ein neues Abzeichen verdient
-  und hast bis jetzt {{ this.cardNumber}} gespielt!
+  <h3>Du hast bis jetzt {{ this.cardNumber}}  Karten gespielt und dir ein neues Abzeichen verdient!</h3>
+  <ion-icon *ngIf="cardNumber === 5" name=trophy></ion-icon>
+  <ion-icon *ngIf="cardNumber === 10" name=star></ion-icon>
+  <ion-icon *ngIf="cardNumber === 15" name=heart></ion-icon>
+  <ion-icon *ngIf="cardNumber === 20" name=bulb></ion-icon>
+  <ion-icon *ngIf="cardNumber === 25" name=beer></ion-icon>
 </ion-content>
