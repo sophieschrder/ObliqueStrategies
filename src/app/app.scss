@@ -36,6 +36,12 @@
   .toast-wrapper {
     background: darkblue;
     border-radius: 25px;
+    height: 4em;
+    width: 20em;
+    .toast-message{
+      color: yellow;
+      text-align: center;
+    }
   }
 }
 
