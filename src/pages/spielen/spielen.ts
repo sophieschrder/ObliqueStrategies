@@ -1,8 +1,7 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
+import {IonicPage, ModalController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {Card} from "../../cards";
 import {CardServiceProvider} from "../../providers/card-service/card-service";
-import {AlertController} from 'ionic-angular';
 import {Storage} from "@ionic/storage";
 import {Badge1Page} from "../badge1/badge1";
 
@@ -22,8 +21,8 @@ export class SpielenPage {
   totalCardsPlayed: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider,
-              public alertCtrl: AlertController, private toastCtrl: ToastController,
-              private storage: Storage) {
+              private toastCtrl: ToastController,
+              private storage: Storage, private modalCtrl: ModalController) {
     this.cards = this.myCardsService.getCards();
     this.getCard();
   }
@@ -42,7 +41,6 @@ export class SpielenPage {
   async acceptCard() {
     this.showButtons = false;
     this.presentToast();
-    //showAlert();
 
     this.storage.get('history').then((historie) => {
       this.cardHistory = JSON.parse(historie) || [];
@@ -50,32 +48,25 @@ export class SpielenPage {
       console.log(this.totalCardsPlayed);
       if(this.totalCardsPlayed === 5 || this.totalCardsPlayed === 10 || this.totalCardsPlayed === 15
         || this.totalCardsPlayed === 20 ||this.totalCardsPlayed === 25 || this.totalCardsPlayed === 30 ){
-        this.navCtrl.push(Badge1Page,{cardsPlayed:this.totalCardsPlayed} );
+        //this.navCtrl.push(Badge1Page,{cardsPlayed:this.totalCardsPlayed} );
+        this.presentModal();
       }
       this.cardHistory.push(this.card.id);
       return this.storage.set('history', JSON.stringify(this.cardHistory));
     });
   }
 
- /* showAlert() {
-    const alert = this.alertCtrl.create({
-      title: 'Juuhuuuuu!',
-      subTitle: 'Du hast eine Karte ausgewählt! Viel Spaß beim Spielen!',
-      buttons: ['OK']
-    });
-    alert.present();
-  }*/
+  presentModal() {
+    let badgeModal = this.modalCtrl.create(Badge1Page, { cardsPlayed:this.totalCardsPlayed });
+    badgeModal.present();
+  }
 
   presentToast() {
     let toast = this.toastCtrl.create({
-      message: 'Du hast eine neue Karte ausgewählt. Viel Erfolg!',
+      message: 'Du hast eine neue Karte ausgewählt. Viel Spaß!',
       duration: 1000,
       position: 'middle',
       cssClass: 'myToast'
-    });
-
-    toast.onDidDismiss(() => {
-      console.log('Dismissed toast');
     });
 
     toast.present();

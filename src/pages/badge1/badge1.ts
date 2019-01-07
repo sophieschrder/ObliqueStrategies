@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams,ViewController } from 'ionic-angular';
 
 
 @IonicPage()
@@ -11,12 +11,16 @@ export class Badge1Page {
 
   cardNumber: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navParams: NavParams, public viewCtrl: ViewController) {
     this.cardNumber = navParams.get('cardsPlayed');
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad Badge1Page');
+  }
+
+  dismiss() {
+    this.viewCtrl.dismiss();
   }
 
 }
