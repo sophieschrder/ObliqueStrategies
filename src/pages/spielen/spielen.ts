@@ -3,7 +3,7 @@ import {IonicPage, ModalController, NavController, NavParams, ToastController} f
 import {Card} from "../../cards";
 import {CardServiceProvider} from "../../providers/card-service/card-service";
 import {Storage} from "@ionic/storage";
-import {Badge1Page} from "../badge1/badge1";
+import {BadgePage} from "../badge/badge";
 
 
 @IonicPage()
@@ -57,7 +57,7 @@ export class SpielenPage {
   }
 
   presentModal() {
-    let badgeModal = this.modalCtrl.create(Badge1Page, { cardsPlayed:this.totalCardsPlayed });
+    let badgeModal = this.modalCtrl.create(BadgePage, { cardsPlayed:this.totalCardsPlayed });
     badgeModal.present();
   }
 

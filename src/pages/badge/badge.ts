@@ -4,10 +4,10 @@ import { IonicPage, NavParams,ViewController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-badge1',
-  templateUrl: 'badge1.html',
+  selector: 'page-badge',
+  templateUrl: 'badge.html',
 })
-export class Badge1Page {
+export class BadgePage {
 
   cardNumber: number;
 

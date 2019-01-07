@@ -15,7 +15,7 @@ import {StoebernPage} from "../pages/stoebern/stoebern";
 import {AboutPage} from "../pages/about/about";
 import { CardServiceProvider } from '../providers/card-service/card-service';
 import {SpielenPage} from "../pages/spielen/spielen";
-import {Badge1Page} from "../pages/badge1/badge1";
+import {BadgePage} from "../pages/badge/badge";
 
 
 @NgModule({
@@ -28,7 +28,7 @@ import {Badge1Page} from "../pages/badge1/badge1";
     AboutPage,
     SpielenPage,
     SettingsPage,
-    Badge1Page
+    BadgePage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +45,7 @@ import {Badge1Page} from "../pages/badge1/badge1";
     AboutPage,
     SpielenPage,
     SettingsPage,
-    Badge1Page
+    BadgePage
   ],
   providers: [
     StatusBar,
