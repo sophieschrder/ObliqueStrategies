@@ -13,7 +13,7 @@ import {AboutPage} from "../pages/about/about";
 import {SpielenPage} from "../pages/spielen/spielen";
 import {Storage} from "@ionic/storage";
 
-
+import {timer} from 'rxjs/observable/timer';
 
 
 @Component({
@@ -25,6 +25,7 @@ export class MyApp {
   rootPage: any;
   pages: Array<{ title: string, component: any }>;
 
+  showSplash = true;
 
   constructor(
     public platform: Platform,
@@ -53,6 +54,8 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.setRootPage();
+
+      timer(4000).subscribe(() => this.showSplash = false)
     });
   }
 
