@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import {IonicPage, NavController, NavParams} from 'ionic-angular';
+import {IonicPage, ModalController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {Card} from "../../cards";
 import {CardServiceProvider} from "../../providers/card-service/card-service";
-import {AlertController} from 'ionic-angular';
 import {Storage} from "@ionic/storage";
+import {BadgePage} from "../badge/badge";
 
 
 @IonicPage()
@@ -18,9 +18,11 @@ export class SpielenPage {
   playCounter: number = 0;
   cardHistory: number[];
   showButtons: boolean = true;
+  totalCardsPlayed: number;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider, public alertCtrl: AlertController,
-              private storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public myCardsService: CardServiceProvider,
+              private toastCtrl: ToastController,
+              private storage: Storage, private modalCtrl: ModalController) {
     this.cards = this.myCardsService.getCards();
     this.getCard();
   }
@@ -38,20 +40,35 @@ export class SpielenPage {
   //Storage wird ausgelesen und id der selektierten Karte zur history hinzugefügt
   async acceptCard() {
     this.showButtons = false;
-    this.showAlert();
+    this.presentToast();
+
     this.storage.get('history').then((historie) => {
       this.cardHistory = JSON.parse(historie) || [];
+      this.totalCardsPlayed= this.cardHistory.length;
+      console.log(this.totalCardsPlayed);
+      if(this.totalCardsPlayed === 5 || this.totalCardsPlayed === 10 || this.totalCardsPlayed === 15
+        || this.totalCardsPlayed === 20 ||this.totalCardsPlayed === 25 || this.totalCardsPlayed === 30 ){
+        //this.navCtrl.push(Badge1Page,{cardsPlayed:this.totalCardsPlayed} );
+        this.presentModal();
+      }
       this.cardHistory.push(this.card.id);
       return this.storage.set('history', JSON.stringify(this.cardHistory));
     });
   }
 
-  showAlert() {
-    const alert = this.alertCtrl.create({
-      title: 'Juuhuuuuu!',
-      subTitle: 'Du hast eine Karte ausgewählt! Viel Spaß beim Spielen!',
-      buttons: ['OK']
+  presentModal() {
+    let badgeModal = this.modalCtrl.create(BadgePage, { cardsPlayed:this.totalCardsPlayed });
+    badgeModal.present();
+  }
+
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'Du hast eine neue Karte ausgewählt. Viel Spaß!',
+      duration: 1000,
+      position: 'middle',
+      cssClass: 'myToast'
     });
-    alert.present();
+
+    toast.present();
   }
 }

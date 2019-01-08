@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Quriousity Sternchen
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <span ion-text color="primary" showWhen="ios">zurück</span>
+        <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Du hast bis jetzt {{ this.cardNumber}}  Karten gespielt und dir ein neues Abzeichen verdient!</h3>
+  <ion-icon *ngIf="cardNumber === 5" name=trophy></ion-icon>
+  <ion-icon *ngIf="cardNumber === 10" name=star></ion-icon>
+  <ion-icon *ngIf="cardNumber === 15" name=heart></ion-icon>
+  <ion-icon *ngIf="cardNumber === 20" name=bulb></ion-icon>
+  <ion-icon *ngIf="cardNumber === 25" name=beer></ion-icon>
+</ion-content>
