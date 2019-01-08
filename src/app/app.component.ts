@@ -41,7 +41,7 @@ export class MyApp {
       {title: 'Spielen', component: SpielenPage},
       {title: 'Stöbern', component: StoebernPage},
       {title: 'Meine Spielhistorie', component: HistoriePage},
-      {title: 'Einstellungen', component: SettingsPage},
+      {title: 'Mein Profil', component: SettingsPage},
       {title: 'About', component: AboutPage}
     ];
   }
