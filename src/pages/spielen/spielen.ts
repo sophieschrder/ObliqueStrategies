@@ -63,8 +63,8 @@ export class SpielenPage {
 
   presentToast() {
     let toast = this.toastCtrl.create({
-      message: 'Du hast eine neue Karte ausgewählt. Viel Spaß!',
-      duration: 1000,
+      message: 'Viel Spaß mit der ausgewählten Karte!',
+      duration: 3000,
       position: 'middle',
       cssClass: 'myToast'
     });
