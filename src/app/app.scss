@@ -45,8 +45,10 @@
   }
 }
 
-
 //Card-Colors
+$cardTitel: white;
+$cardIcon: white;
+$cardText: white;
 
 $kommunikation:    #46577B;
 $kommunikation-hover: #79a1db;
@@ -63,4 +65,36 @@ $perspektivwechsel-hover: #346c78;
 $stellDirVor: #D292AD;
 $stellDirVor-hover: #fdd2eb;
 $joker: #ffcb05;
+
+//Hintergruende der Karten
+.kommunikation {
+  background-color: $kommunikation;
+}
+
+.Arbeitsmittel {
+  background-color: $arbeitsmittel;
+}
+
+.arbeitsplatz {
+  background-color: $arbeitsplatz;
+}
+.bleibTapfer {
+  background-color: $bleibTapfer;
+}
+
+.informationsbeschaffung {
+  background-color: $informationsbeschaffung;
+}
+
+.Perspektivwechsel {
+  background-color: $perspektivwechsel;
+}
+
+.stellDirVor {
+  background-color: $stellDirVor;
+}
+
+.joker {
+  background-color: $joker;
+}
 
