@@ -37,12 +37,12 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      {title: 'Startseite', component: StartPage, icon: 'heart' },
+      {title: 'Startseite', component: StartPage, icon: 'flag' },
       {title: 'Spielen', component: SpielenPage, icon: 'game-controller-a'},
-      {title: 'Stöbern', component: StoebernPage, icon: 'alarm'},
-      {title: 'Meine Spielhistorie', component: HistoriePage, icon: 'alarm'},
-      {title: 'Einstellungen', component: SettingsPage, icon: 'alarm'},
-      {title: 'About', component: AboutPage, icon: 'alarm'}
+      {title: 'Stöbern', component: StoebernPage, icon: 'eye'},
+      {title: 'Meine Spielhistorie', component: HistoriePage, icon: 'paper'},
+      {title: 'Einstellungen', component: SettingsPage, icon: 'ios-settings'},
+      {title: 'About', component: AboutPage, icon: 'paper-plane'}
     ];
   }
 
