@@ -21,18 +21,6 @@ export class SettingsPage {
               public alertCtrl: AlertController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad SettingsPage');
-  }
-
-  public async showHistory(){
-    this.history= await this.storage.get('history');
-  }
-
-  public clearHistory(){
-    this.storage.clear().then(() => {console.log('Historie entfernt')});
-  }
-
   //Funktion/Methode des lokalen Benachrichtigungs-Schedulers
   submit() {
     console.log(this.data);
@@ -41,12 +29,13 @@ export class SettingsPage {
     this.localNotifications.schedule({
       text: 'Delayed ILocalNotification',
       trigger: date,
+      icon: "ic_notifications",
       led: 'FF0000',
       sound: this.setSound(),
     });
     let alert = this.alertCtrl.create({
-      title: 'Congratulation!',
-      subTitle: 'Notification setup successfully at '+date,
+      title: 'Gratulation!',
+      subTitle: 'Benachrichtigung festgelegt um '+date,
       buttons: ['OK']
     });
     alert.present();
@@ -60,5 +49,38 @@ export class SettingsPage {
     } else {
       return 'file://assets/sounds/Rooster.caf'
     }
+  }
+
+  //täglicher reminder
+  /*
+  var today = new Date();
+  var tomorrow = new Date();
+  tomorrow.setDate(today.getDate());
+  tomorrow.setHours(19);
+  tomorrow.setMinutes(36);
+  tomorrow.setSeconds(0);
+  var tomorrow_at_9_am = new Date(tomorrow);
+
+  this.localNotifications.schedule({
+                                     id: 1,
+                                     title: 'test',
+                                     text: 'découvrez nous actuailité du jour',
+                                     icon: "ic_notifications",
+                                     at: tomorrow_at_9_am,
+                                     every:'day'
+                                   });
+                                   */
+
+  //History löschen
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad SettingsPage');
+  }
+
+  public async showHistory(){
+    this.history= await this.storage.get('history');
+  }
+
+  public clearHistory(){
+    this.storage.clear().then(() => {console.log('Historie entfernt')});
   }
 }
