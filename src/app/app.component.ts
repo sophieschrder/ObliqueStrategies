@@ -23,7 +23,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   // make HelloIonicPage the root (or first) page
   rootPage: any;
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, component: any, icon: string}>;
 
 
   constructor(
@@ -37,12 +37,12 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      {title: 'Startseite', component: StartPage},
-      {title: 'Spielen', component: SpielenPage},
-      {title: 'Stöbern', component: StoebernPage},
-      {title: 'Meine Spielhistorie', component: HistoriePage},
-      {title: 'Einstellungen', component: SettingsPage},
-      {title: 'About', component: AboutPage}
+      {title: 'Startseite', component: StartPage, icon: 'heart' },
+      {title: 'Spielen', component: SpielenPage, icon: 'game-controller-a'},
+      {title: 'Stöbern', component: StoebernPage, icon: 'alarm'},
+      {title: 'Meine Spielhistorie', component: HistoriePage, icon: 'alarm'},
+      {title: 'Einstellungen', component: SettingsPage, icon: 'alarm'},
+      {title: 'About', component: AboutPage, icon: 'alarm'}
     ];
   }
 
