@@ -1,0 +1,38 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Dein Kartenvorschlag</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="suggestion" (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label floating>Name</ion-label>
+      <ion-input type="text" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>e-mail</ion-label>
+      <ion-input type="email" formControlName="email"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label floating>Mein Vorschlag für eine neue Karte</ion-label>
+    <ion-textarea formControlName="suggestion"></ion-textarea>
+  </ion-item>
+    <ion-item>
+      <ion-label>Ich möchte gerne den Qudosoft Newsletter erhalten</ion-label>
+      <ion-checkbox formControlName="contactAllowed"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label><button ion-button clear type="button" (click)="showDatenschutz()">Die Datenschutzregelung habe ich gelesen</button></ion-label>
+      <ion-checkbox formControlName="readDatenschutz"></ion-checkbox>
+    </ion-item>
+
+    <button ion-button type="submit" [disabled]="!suggestion.valid">Submit</button>
+  </form>
+</ion-content>

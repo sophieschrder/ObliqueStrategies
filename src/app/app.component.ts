@@ -14,6 +14,7 @@ import {SpielenPage} from "../pages/spielen/spielen";
 import {Storage} from "@ionic/storage";
 
 import {timer} from 'rxjs/observable/timer';
+import {SuggestionsPage} from "../pages/suggestions/suggestions";
 
 
 @Component({
@@ -43,6 +44,7 @@ export class MyApp {
       {title: 'Stöbern', component: StoebernPage},
       {title: 'Meine Spielhistorie', component: HistoriePage},
       {title: 'Mein Profil', component: SettingsPage},
+      {title: 'Karte vorschlagen', component:SuggestionsPage},
       {title: 'About', component: AboutPage}
     ];
   }
