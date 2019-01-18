@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
 import {IonicPage, ModalController, NavController, NavParams, ToastController} from 'ionic-angular';
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
-import {BadgePage} from "../badge/badge";
 import {DatenschutzPage} from "../datenschutz/datenschutz";
-import {SlidesPage} from "../slides/slides";
 
 @IonicPage()
 @Component({
@@ -26,16 +24,19 @@ export class SuggestionsPage {
     }
 
     submitForm(){
-      this.presentToast();
       console.log(this.suggestion.value);
+      this.presentToast();
+      this.suggestion.reset();
+
     }
 
   presentToast() {
     let toast = this.toastCtrl.create({
-      message: 'Danke für den Kartenvorschlag!',
-      duration: 3000,
+      message: `Danke für deinen Kartenvorschlag:  ${this.suggestion.controls.suggestion.value}. 
+                Vielleicht ist die neue Karte schon beim nächsten Update mit dabei!`,
+      duration: 5000,
       position: 'middle',
-      cssClass: 'myToast'
+      //cssClass: 'myToast'
     });
 
     toast.present();
