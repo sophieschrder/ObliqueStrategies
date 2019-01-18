@@ -11,7 +11,7 @@
 
 
 <ion-content padding>
-  <form [formGroup]="suggestion" (ngSubmit)="logForm()">
+  <form [formGroup]="suggestion" (ngSubmit)="submitForm()">
     <ion-item>
       <ion-label floating>Name</ion-label>
       <ion-input type="text" formControlName="name"></ion-input>
@@ -29,8 +29,8 @@
       <ion-checkbox formControlName="contactAllowed"></ion-checkbox>
     </ion-item>
     <ion-item>
-      <ion-label><button ion-button clear type="button" (click)="showDatenschutz()">Die Datenschutzregelung habe ich gelesen</button></ion-label>
-      <ion-checkbox formControlName="readDatenschutz"></ion-checkbox>
+      <ion-label>Die Datenschutzregelung habe ich gelesen und akzeptiert</ion-label>
+      <ion-checkbox formControlName="readDatenschutz" (click)="showDatenschutz()"></ion-checkbox>
     </ion-item>
 
     <button ion-button type="submit" [disabled]="!suggestion.valid">Submit</button>

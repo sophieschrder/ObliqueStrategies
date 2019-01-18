@@ -25,7 +25,7 @@ export class SuggestionsPage {
       });
     }
 
-    logForm(){
+    submitForm(){
       this.presentToast();
       console.log(this.suggestion.value);
     }
@@ -42,7 +42,9 @@ export class SuggestionsPage {
   }
 
   showDatenschutz(){
-    this.navCtrl.push(DatenschutzPage);
+    if(this.suggestion.get('readDatenschutz').value === true){
+      this.navCtrl.push(DatenschutzPage);
+    }
   }
 
 }
