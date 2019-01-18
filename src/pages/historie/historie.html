@@ -8,8 +8,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <ion-content padding>
+    <ion-content padding>
     <ion-slides pager loop="true">
       <ion-slide *ngFor="let card of cardHistory" ngClass="{{card.category}}">
         <p class="card-category"><b>{{card.category}}</b></p>
@@ -17,5 +16,6 @@
         <h3>{{card.text}}</h3>
       </ion-slide>
     </ion-slides>
-  </ion-content>
-</ion-content>
+    </ion-content>
+
+

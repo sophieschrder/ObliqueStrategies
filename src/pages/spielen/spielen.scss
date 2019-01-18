@@ -55,11 +55,12 @@ page-spielen {
 
   p {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 25px;
   }
   .button-md {
     height: 5em;
     border-radius: 5px;
     background-color: #414141;
+    color: $cardTitel;
   }
 }
