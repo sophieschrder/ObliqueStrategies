@@ -24,15 +24,16 @@
     <ion-label floating>Mein Vorschlag für eine neue Karte</ion-label>
     <ion-textarea formControlName="suggestion"></ion-textarea>
   </ion-item>
+    <div class="checkbuttons">
     <ion-item>
       <ion-label>Ich möchte gerne den Qudosoft Newsletter erhalten</ion-label>
       <ion-checkbox formControlName="contactAllowed"></ion-checkbox>
     </ion-item>
     <ion-item>
-      <ion-label>Die Datenschutzregelung habe ich gelesen und akzeptiert</ion-label>
+      <ion-label>Ich akzeptiere die Datenschutzregelung </ion-label>
       <ion-checkbox formControlName="readDatenschutz" (click)="showDatenschutz()"></ion-checkbox>
     </ion-item>
-
-    <button ion-button type="submit" [disabled]="!suggestion.valid">Submit</button>
+    </div>
+    <button ion-button block  type="submit" [disabled]="!suggestion.valid" class="submitButton">Abschicken</button>
   </form>
 </ion-content>
