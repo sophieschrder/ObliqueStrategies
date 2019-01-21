@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import {IonicPage, ModalController, NavController, NavParams, ToastController} from 'ionic-angular';
+import {IonicPage, NavController, NavParams, ToastController} from 'ionic-angular';
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 import {DatenschutzPage} from "../datenschutz/datenschutz";
+import { RestProvider} from "../../providers/rest/rest";
 
 @IonicPage()
 @Component({
@@ -13,7 +14,7 @@ export class SuggestionsPage {
   suggestionForm: FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private fb:FormBuilder,
-              private toastCtrl: ToastController, private modalCtrl: ModalController) {
+              private toastCtrl: ToastController, public restProvider: RestProvider) {
       this.suggestionForm = this.fb.group({
         name: ['', Validators.required],
         suggestion: ['', Validators.required],
@@ -25,10 +26,12 @@ export class SuggestionsPage {
 
     submitForm(){
       console.log(this.suggestionForm.value);
+      this.sendSuggestion(this.suggestionForm.value);
       this.presentToast();
       this.suggestionForm.reset();
 
     }
+
 
   presentToast() {
     let toast = this.toastCtrl.create({
@@ -46,6 +49,14 @@ export class SuggestionsPage {
     if(this.suggestionForm.get('readDatenschutz').value === true){
       this.navCtrl.push(DatenschutzPage);
     }
+  }
+
+  sendSuggestion(content){
+    this.restProvider.sendSuggestion(content).then((result) => {
+      console.log(result);
+    }, (err) => {
+      console.log(err);
+    });
   }
 
 }
