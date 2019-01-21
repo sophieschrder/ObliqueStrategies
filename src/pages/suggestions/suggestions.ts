@@ -10,11 +10,11 @@ import {DatenschutzPage} from "../datenschutz/datenschutz";
 })
 
 export class SuggestionsPage {
-  suggestion: FormGroup;
+  suggestionForm: FormGroup;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private fb:FormBuilder,
               private toastCtrl: ToastController, private modalCtrl: ModalController) {
-      this.suggestion = this.fb.group({
+      this.suggestionForm = this.fb.group({
         name: ['', Validators.required],
         suggestion: ['', Validators.required],
         email: ['', Validators.email],
@@ -24,15 +24,15 @@ export class SuggestionsPage {
     }
 
     submitForm(){
-      console.log(this.suggestion.value);
+      console.log(this.suggestionForm.value);
       this.presentToast();
-      this.suggestion.reset();
+      this.suggestionForm.reset();
 
     }
 
   presentToast() {
     let toast = this.toastCtrl.create({
-      message: `Danke für deinen Kartenvorschlag:  ${this.suggestion.controls.suggestion.value}. 
+      message: `Danke für deinen Kartenvorschlag:  ${this.suggestionForm.controls.suggestion.value}. 
                 Vielleicht ist die neue Karte schon beim nächsten Update mit dabei!`,
       duration: 5000,
       position: 'middle',
@@ -43,7 +43,7 @@ export class SuggestionsPage {
   }
 
   showDatenschutz(){
-    if(this.suggestion.get('readDatenschutz').value === true){
+    if(this.suggestionForm.get('readDatenschutz').value === true){
       this.navCtrl.push(DatenschutzPage);
     }
   }
