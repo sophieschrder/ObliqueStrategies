@@ -39,13 +39,13 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      {title: 'Startseite', component: StartPage},
-      {title: 'Spielen', component: SpielenPage},
-      {title: 'Stöbern', component: StoebernPage},
-      {title: 'Meine Spielhistorie', component: HistoriePage},
-      {title: 'Mein Profil', component: SettingsPage},
-      {title: 'Karte vorschlagen', component:SuggestionsPage},
-      {title: 'About', component: AboutPage}
+      {title: 'Startseite', component: StartPage, icon: 'flag'},
+      {title: 'Spielen', component: SpielenPage, icon: 'game-controller-a'},
+      {title: 'Stöbern', component: StoebernPage, icon: 'eye'},
+      {title: 'Meine Spielhistorie', component: HistoriePage, icon: 'paper'},
+      {title: 'Mein Profil', component: SettingsPage, icon: 'ios-settings'},
+      {title: 'Karte vorschlagen', component:SuggestionsPage, icon: 'paper-plane'},
+      {title: 'About', component: AboutPage, icon: 'information-circle'}
     ];
   }
 
