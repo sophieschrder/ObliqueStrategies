@@ -13,7 +13,8 @@ import {AboutPage} from "../pages/about/about";
 import {SpielenPage} from "../pages/spielen/spielen";
 import {Storage} from "@ionic/storage";
 
-
+import {timer} from 'rxjs/observable/timer';
+import {SuggestionsPage} from "../pages/suggestions/suggestions";
 
 
 @Component({
@@ -25,6 +26,7 @@ export class MyApp {
   rootPage: any;
   pages: Array<{ title: string, component: any, icon: string}>;
 
+  showSplash = true;
 
   constructor(
     public platform: Platform,
@@ -37,12 +39,13 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      {title: 'Startseite', component: StartPage, icon: 'flag' },
-      {title: 'Spielen', component: SpielenPage, icon: 'game-controller-a'},
-      {title: 'Stöbern', component: StoebernPage, icon: 'eye'},
-      {title: 'Meine Spielhistorie', component: HistoriePage, icon: 'paper'},
-      {title: 'Einstellungen', component: SettingsPage, icon: 'ios-settings'},
-      {title: 'About', component: AboutPage, icon: 'paper-plane'}
+      {title: 'Startseite', component: StartPage},
+      {title: 'Spielen', component: SpielenPage},
+      {title: 'Stöbern', component: StoebernPage},
+      {title: 'Meine Spielhistorie', component: HistoriePage},
+      {title: 'Mein Profil', component: SettingsPage},
+      {title: 'Karte vorschlagen', component:SuggestionsPage},
+      {title: 'About', component: AboutPage}
     ];
   }
 
@@ -53,6 +56,8 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.setRootPage();
+
+      timer(4000).subscribe(() => this.showSplash = false)
     });
   }
 

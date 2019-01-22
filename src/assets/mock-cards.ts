@@ -1,7 +1,7 @@
 import {Card} from "../cards";
 export const CARDS: Card[] = [
   { id: 1, title: 'ausserHaus', category: "kommunikation",
-    text: "Gehe aus dem Haus und spreche mit Menschen über dein Produkt",
+    text: "Gehe aus dem Haus und spreche mit Menschen über dein Projekt",
     img: "chatbubbles", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 2, title: 'chatten', category: "kommunikation",
@@ -53,7 +53,7 @@ export const CARDS: Card[] = [
     img: "briefcase", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 14, title: 'tauschen', category: "arbeitsplatz",
-    text: "Tausche mit einem Kollegen (aus einem anderen Team) die Arbeit!",
+    text: "Tausche mit einem Kollegen aus einem anderen Team die Arbeit!",
     img: "sync", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 15, title: 'tauschen', category: "bleibTapfer",
@@ -77,7 +77,7 @@ export const CARDS: Card[] = [
     img: "ice-cream", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 20, title: 'tauschen', category: "bleibTapfer",
-    text: "Übernimm eine Aufgabe, die Du noch nie wahrgenommen hast.",
+    text: "Übernimm eine Aufgabe, die du noch nie wahrgenommen hast.",
     img: "clipboard", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 21, title: 'tauschen', category: "bleibTapfer",
@@ -89,7 +89,7 @@ export const CARDS: Card[] = [
     img: "chatbubbles", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 23, title: 'tauschen', category: "informationsbeschaffung",
-    text: "Suche einen Tag lang Lösungen nicht im Internet sondern frage Kollegen oder Bücher um Rat",
+    text: "Suche einen Tag lang Lösungen nicht im Internet, sondern frage Kollegen oder Bücher um Rat",
     img: "person", history: ['02-1-2018', "06-2-2018"],
   },
   { id: 24, title: 'slackAttack', category: "joker",
@@ -101,19 +101,19 @@ export const CARDS: Card[] = [
     img: "restaurant", history: ['02-1-2018', "06-2-2018"]
   },
   { id: 26, title: 'umweg', category: "Perspektivwechsel",
-    text: "Nimm einen Weg nach Hause, den du sonst nie gehst.",
+    text: "Nimm einen Weg nach Hause, den du sonst nie gehst",
     img: "walk", history: ['02-1-2018', "06-2-2018"]
   },
   { id: 27, title: 'rentner', category: "Perspektivwechsel",
-    text: "Erkläre einem älteren Verwandten woran du gerade arbeitest.",
+    text: "Erkläre einem älteren Verwandten woran du gerade arbeitest",
     img: "person", history: ['02-1-2018', "06-2-2018"]
   },
   { id: 28, title: 'kind', category: "Perspektivwechsel",
-    text: "Erläre einem Kind woran du gerade arbeitest.",
+    text: "Erläre einem Kind woran du gerade arbeitest",
     img: "person", history: ['02-1-2018', "06-2-2018"]
   },
   { id: 29, title: 'nachbar', category: "Perspektivwechsel",
-    text: "Klingel bei den Nachbarn und biete deine Hilfe an",
+    text: "Klingel bei deinen Nachbarn und biete deine Hilfe an",
     img: "help-circle", history: ['02-1-2018', "06-2-2018"]
   },
   { id: 31, title: 'sprache', category: "Arbeitsmittel",

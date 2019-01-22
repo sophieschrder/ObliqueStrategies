@@ -16,6 +16,10 @@ import {AboutPage} from "../pages/about/about";
 import { CardServiceProvider } from '../providers/card-service/card-service';
 import {SpielenPage} from "../pages/spielen/spielen";
 import {BadgePage} from "../pages/badge/badge";
+import {SuggestionsPage} from "../pages/suggestions/suggestions";
+import { DatenschutzPage} from "../pages/datenschutz/datenschutz";
+import {HttpClientModule} from "@angular/common/http";
+import { RestProvider } from '../providers/rest/rest';
 
 
 @NgModule({
@@ -28,10 +32,13 @@ import {BadgePage} from "../pages/badge/badge";
     AboutPage,
     SpielenPage,
     SettingsPage,
-    BadgePage
+    BadgePage,
+    SuggestionsPage,
+    DatenschutzPage
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
@@ -45,13 +52,16 @@ import {BadgePage} from "../pages/badge/badge";
     AboutPage,
     SpielenPage,
     SettingsPage,
-    BadgePage
+    BadgePage,
+    SuggestionsPage,
+    DatenschutzPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    CardServiceProvider
+    CardServiceProvider,
+    RestProvider
   ]
 })
 export class AppModule {}
