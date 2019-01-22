@@ -24,7 +24,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   // make HelloIonicPage the root (or first) page
   rootPage: any;
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, component: any, icon: string}>;
 
   showSplash = true;
 

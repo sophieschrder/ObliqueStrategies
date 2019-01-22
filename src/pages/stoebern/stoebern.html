@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu" color="dark"></ion-icon>
+      <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Stöbermodus</ion-title>
   </ion-navbar>
@@ -9,14 +9,15 @@
 
 
 <ion-content padding>
+  <div class="cont">
   <ion-grid>
     <ion-row>
       <ion-col>
-        <div>
+
           <p>Im Stöbermodus kannst du dir alle Karten des Spiels anschauen oder in den einzelnen Kategorien stöbern, um
             dir
             so einen Überblick zu verschaffen was dich erwartet. </p>
-        </div>
+
       </ion-col>
     </ion-row>
 
@@ -32,16 +33,17 @@
     <ion-row>
       <ion-col>
         <div>
-          <button ion-button icon-only block (click)="pushPage('kommunikation')" class="kommunikation">
-            <ion-icon name="chatboxes"></ion-icon>
+          <button ion-button icon-only block (click)="pushPage('arbeitsplatz')" class="arbeitsplatz">
+            <ion-icon name="desktop"></ion-icon>
           </button>
         </div>
       </ion-col>
       <ion-col>
         <div>
-          <button ion-button icon-only block (click)="pushPage('arbeitsplatz')" class="arbeitsplatz">
-            <ion-icon name="desktop"></ion-icon>
+          <button ion-button icon-only block (click)="pushPage('kommunikation')" class="kommunikation">
+            <ion-icon name="chatboxes"></ion-icon>
           </button>
+
         </div>
       </ion-col>
     </ion-row>
@@ -80,5 +82,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
+  </div>
 </ion-content>

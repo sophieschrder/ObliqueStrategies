@@ -43,7 +43,7 @@ page-stoebern {
   }
 
   .all:hover {
-    background-color: #777777 !important;
+    background-color: #a5a5a5 !important;
   }
 
   button.kommunikation {
@@ -89,16 +89,11 @@ page-stoebern {
   }
 
   button.all {
-    background-color: darkgrey;
+    background-color: #838383;
     color: white;
     height: 3em;
     font-size: 20px;
     font-weight: bold;
   }
-
-  ion-icon {
-    color: white;
-  }
-
 }
 

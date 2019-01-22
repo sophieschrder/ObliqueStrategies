@@ -2,7 +2,7 @@
 
   <ion-navbar>
     <button ion-button menuToggle>
-      <ion-icon name="menu" color="dark"></ion-icon>
+      <ion-icon name="menu" ></ion-icon>
     </button>
     <ion-title>Spielen</ion-title>
   </ion-navbar>
@@ -26,12 +26,12 @@
     <ion-row *ngIf="showButtons">
       <ion-col>
         <button *ngIf="playCounter < 3" ion-button icon-only block (click)="getCard()">
-          <p>Neue Karte</p>
+          <p><ion-icon name="close"></ion-icon></p>
         </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-only block (click)="acceptCard()">
-          <p>Karte annehmen</p>
+          <p><ion-icon name="checkmark"></ion-icon></p>
         </button>
       </ion-col>
     </ion-row>
