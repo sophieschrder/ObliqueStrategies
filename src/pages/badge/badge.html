@@ -12,10 +12,10 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Du hast bis jetzt {{ this.cardNumber}}  Karten gespielt und dir ein neues Abzeichen verdient!</h3>
-  <ion-icon *ngIf="cardNumber === 5" name=trophy></ion-icon>
-  <ion-icon *ngIf="cardNumber === 10" name=star></ion-icon>
-  <ion-icon *ngIf="cardNumber === 15" name=heart></ion-icon>
-  <ion-icon *ngIf="cardNumber === 20" name=bulb></ion-icon>
-  <ion-icon *ngIf="cardNumber === 25" name=beer></ion-icon>
+  <h3>Du hast bis jetzt {{ this.cardNumber + 1}}  Karten gespielt und dir ein neues Abzeichen verdient!</h3>
+  <ion-icon *ngIf="cardNumber === 4" name=trophy></ion-icon>
+  <ion-icon *ngIf="cardNumber === 9" name=star></ion-icon>
+  <ion-icon *ngIf="cardNumber === 14" name=heart></ion-icon>
+  <ion-icon *ngIf="cardNumber === 19" name=bulb></ion-icon>
+  <ion-icon *ngIf="cardNumber === 24" name=beer></ion-icon>
 </ion-content>

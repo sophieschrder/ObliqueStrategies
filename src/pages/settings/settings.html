@@ -3,13 +3,18 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Einstellungen</ion-title>
+    <ion-title>Mein Profil</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <button ion-button color="secondary" (click)="showHistory()">Gespielte Ids</button>
   <button ion-button color="danger" (click)="clearHistory()">Historie entfernen</button>
+  <button ion-button color="secondary" (click)="showBadges()">Meine Badges</button>
+  <ion-icon *ngIf="totalCardsPlayed > 4" name=trophy></ion-icon>
+  <ion-icon *ngIf="totalCardsPlayed > 9" name=star></ion-icon>
+  <ion-icon *ngIf="totalCardsPlayed > 14" name=heart></ion-icon>
+  <ion-icon *ngIf="totalCardsPlayed > 19" name=bulb></ion-icon>
+  <ion-icon *ngIf="totalCardsPlayed > 24" name=beer></ion-icon>
   <div>{{history}}</div>
 </ion-content>
