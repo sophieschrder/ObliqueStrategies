@@ -21,14 +21,28 @@ export class SettingsPage {
               public alertCtrl: AlertController) {
   }
 
+  btnPushClicked(){
+    this.platform.ready().then(() => {
+      // zeitversetzte Benachrichtigung planen
+      this.localNotifications.schedule({
+        title: 'Quriosity',
+        text: 'Hey! Zieh mal heute wieder eine Karte',
+        trigger: {at: new Date(new Date().getTime() + 3600)},
+        icon: "ic_notifications",
+        led: 'FF0000',
+        sound: this.setSound(),
+      });
+    });
+  }
+
   //Funktion/Methode des lokalen Benachrichtigungs-Schedulers
-  submit() {
+ /* submit() {
     console.log(this.data);
     var date = new Date(this.data.date+" "+this.data.time);
     console.log(date);
     this.localNotifications.schedule({
       text: 'Delayed ILocalNotification',
-      trigger: date,
+      at: date,
       icon: "ic_notifications",
       led: 'FF0000',
       sound: this.setSound(),
@@ -40,7 +54,7 @@ export class SettingsPage {
     });
     alert.present();
     this.data = { title:'', description:'', date:'', time:'' };
-  }
+  } */
 
   //Funktion zum Einstellen der Sounddatei für die jeweilige Plattform
   setSound() {
@@ -51,25 +65,6 @@ export class SettingsPage {
     }
   }
 
-  //täglicher reminder
-  /*
-  var today = new Date();
-  var tomorrow = new Date();
-  tomorrow.setDate(today.getDate());
-  tomorrow.setHours(19);
-  tomorrow.setMinutes(36);
-  tomorrow.setSeconds(0);
-  var tomorrow_at_9_am = new Date(tomorrow);
-
-  this.localNotifications.schedule({
-                                     id: 1,
-                                     title: 'test',
-                                     text: 'découvrez nous actuailité du jour',
-                                     icon: "ic_notifications",
-                                     at: tomorrow_at_9_am,
-                                     every:'day'
-                                   });
-                                   */
 
   //History löschen
   ionViewDidLoad() {
