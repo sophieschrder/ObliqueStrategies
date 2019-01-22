@@ -11,6 +11,7 @@
 
 
 <ion-content padding>
+  <div>
   <form [formGroup]="suggestionForm" (ngSubmit)="submitForm()">
     <ion-item>
     <div>Hast du eine Idee für eine weitere Quriosity Karte?</div>
@@ -27,16 +28,15 @@
     <ion-label floating>Mein Vorschlag für eine neue Karte</ion-label>
     <ion-textarea formControlName="suggestion"></ion-textarea>
   </ion-item>
-    <div class="checkbuttons">
-    <ion-item>
+    <ion-item class="checkbuttons">
       <ion-label>Ich möchte gerne den Qudosoft Newsletter erhalten</ion-label>
       <ion-checkbox formControlName="contactAllowed"></ion-checkbox>
     </ion-item>
-    <ion-item>
+    <ion-item class="checkbuttons">
       <ion-label>Ich akzeptiere die Datenschutzregelung </ion-label>
       <ion-checkbox formControlName="readDatenschutz" (click)="showDatenschutz()"></ion-checkbox>
     </ion-item>
-    </div>
     <button ion-button block  type="submit" [disabled]="!suggestionForm.valid" class="submitButton">Abschicken</button>
   </form>
+  </div>
 </ion-content>
