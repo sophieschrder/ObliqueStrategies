@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Quriousity Sternchen
+      Quriousity Abzeichen
     </ion-title>
     <ion-buttons start>
       <button ion-button (click)="dismiss()">
@@ -12,10 +12,22 @@
 </ion-header>
 
 <ion-content padding>
-  <h3>Du hast bis jetzt {{ this.cardNumber + 1}}  Karten gespielt und dir ein neues Abzeichen verdient!</h3>
-  <ion-icon *ngIf="cardNumber === 4" name=trophy></ion-icon>
-  <ion-icon *ngIf="cardNumber === 9" name=star></ion-icon>
-  <ion-icon *ngIf="cardNumber === 14" name=heart></ion-icon>
-  <ion-icon *ngIf="cardNumber === 19" name=bulb></ion-icon>
-  <ion-icon *ngIf="cardNumber === 24" name=beer></ion-icon>
+  <div *ngIf="parentPage == 'spielenPage'">
+    <h3 >Du hast bis jetzt {{ this.cardNumber + 1}}  Karten gespielt und dir ein neues Abzeichen verdient!</h3>
+    <ion-icon *ngIf="cardNumber === 4" name=trophy></ion-icon>
+    <ion-icon *ngIf="cardNumber === 9" name=star></ion-icon>
+    <ion-icon *ngIf="cardNumber === 14" name=heart></ion-icon>
+    <ion-icon *ngIf="cardNumber === 19" name=bulb></ion-icon>
+    <ion-icon *ngIf="cardNumber === 24" name=beer></ion-icon>
+  </div>
+  <div *ngIf="parentPage == 'meinProfilPage'">
+    <h3 >In dieser Spielrunde bereits verdiente Abzeichen:</h3>
+    <ion-icon *ngIf="cardNumber > 4" name=trophy></ion-icon>
+    <ion-icon *ngIf="cardNumber > 9" name=star></ion-icon>
+    <ion-icon *ngIf="cardNumber > 14" name=heart></ion-icon>
+    <ion-icon *ngIf="cardNumber > 19" name=bulb></ion-icon>
+    <ion-icon *ngIf="cardNumber > 24" name=beer></ion-icon>
+  </div>
+
+
 </ion-content>

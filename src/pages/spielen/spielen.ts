@@ -57,7 +57,7 @@ export class SpielenPage {
   }
 
   presentModal() {
-    let badgeModal = this.modalCtrl.create(BadgePage, { cardsPlayed:this.totalCardsPlayed });
+    let badgeModal = this.modalCtrl.create(BadgePage, { cardsPlayed:this.totalCardsPlayed, page: "spielenPage" });
     badgeModal.present();
   }
 
