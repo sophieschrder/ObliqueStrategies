@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import {IonicPage, ModalController, NavController, NavParams} from 'ionic-angular';
 import {Storage} from "@ionic/storage";
 import {BadgePage} from "../badge/badge";
+import {HistoriePage} from "../historie/historie";
+import {SpielenPage} from "../spielen/spielen";
+
 
 @IonicPage()
 @Component({
@@ -35,6 +38,9 @@ export class SettingsPage {
     badgeModal.present();
   }
 
+  showPlayedCards(){
+    this.navCtrl.setRoot(HistoriePage);
+  }
   public clearHistory(){
     this.storage.clear().then(() => {console.log('Historie entfernt')});
   }

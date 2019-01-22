@@ -8,7 +8,13 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button color="danger" (click)="clearHistory()">Historie entfernen</button>
-  <button ion-button color="secondary" (click)="showBadges()">Meine Badges</button>
-  <div>{{history}}</div>
+  <div>
+    <button ion-button full color="light" (click)="showPlayedCards()">Bereits gespielte Karten</button>
+  </div>
+  <div>
+    <button ion-button full color="light" (click)="clearHistory()">Neue Spielrunde starten und Kartenhistorie löschen</button>
+  </div>
+  <div>
+    <button ion-button full color="light" (click)="showBadges()">Meine Abzeichen in dieser Runde</button>
+  </div>
 </ion-content>
