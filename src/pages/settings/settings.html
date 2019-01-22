@@ -9,6 +9,10 @@
 
 <ion-content padding>
   <button ion-button (click)="btnPushClicked()">Push-Benachrichtigung</button>
+  <br>Das ist eine 14 tägige Erinnerung
+  <br>
+  <br>
+  <h3> Hier kannst du selbst eine Erinnerung festlegen </h3>
   <form (ngSubmit)="submit()">
     <ion-list>
       <ion-item>
@@ -33,6 +37,8 @@
     </div>
   </form>
 
+  <br>
+  <h3> Gespielte Karten kannst du hier einsehen oder auch löschen</h3>
   <button ion-button color="secondary" (click)="showHistory()">Gespielte Ids</button>
   <button ion-button color="danger" (click)="clearHistory()">Historie entfernen</button>
   <div>{{history}}</div>

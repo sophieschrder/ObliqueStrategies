@@ -27,7 +27,7 @@ export class SettingsPage {
       this.localNotifications.schedule({
         title: 'Quriosity',
         text: 'Hey! Zieh mal heute wieder eine Karte',
-        trigger: {at: new Date(new Date().getTime() + 3600)},
+        trigger: {at: new Date(new Date().getTime() + 3600)}, // 14 Tage = 1209600000 sek
         icon: "ic_notifications",
         led: 'FF0000',
         sound: this.setSound(),
