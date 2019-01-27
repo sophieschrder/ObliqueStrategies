@@ -14,6 +14,7 @@ import {SpielenPage} from "../pages/spielen/spielen";
 import {Storage} from "@ionic/storage";
 
 import {timer} from 'rxjs/observable/timer';
+import {SuggestionsPage} from "../pages/suggestions/suggestions";
 
 
 @Component({
@@ -23,7 +24,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
   // make HelloIonicPage the root (or first) page
   rootPage: any;
-  pages: Array<{ title: string, component: any }>;
+  pages: Array<{ title: string, component: any, icon: string}>;
 
   showSplash = true;
 
@@ -38,12 +39,13 @@ export class MyApp {
 
     // set our app's pages
     this.pages = [
-      {title: 'Startseite', component: StartPage},
-      {title: 'Spielen', component: SpielenPage},
-      {title: 'Stöbern', component: StoebernPage},
-      {title: 'Meine Spielhistorie', component: HistoriePage},
-      {title: 'Mein Profil', component: SettingsPage},
-      {title: 'About', component: AboutPage}
+      {title: 'Startseite', component: StartPage, icon: 'flag'},
+      {title: 'Spielen', component: SpielenPage, icon: 'game-controller-a'},
+      {title: 'Stöbern', component: StoebernPage, icon: 'eye'},
+      {title: 'Meine Spielhistorie', component: HistoriePage, icon: 'paper'},
+      {title: 'Mein Profil', component: SettingsPage, icon: 'ios-settings'},
+      {title: 'Karte vorschlagen', component:SuggestionsPage, icon: 'paper-plane'},
+      {title: 'About', component: AboutPage, icon: 'information-circle'}
     ];
   }
 

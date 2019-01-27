@@ -10,9 +10,11 @@ import { IonicPage, NavParams,ViewController } from 'ionic-angular';
 export class BadgePage {
 
   cardNumber: number;
+  parentPage: string;
 
   constructor(public navParams: NavParams, public viewCtrl: ViewController) {
     this.cardNumber = navParams.get('cardsPlayed');
+    this.parentPage = navParams.get('page');
   }
 
   ionViewDidLoad() {

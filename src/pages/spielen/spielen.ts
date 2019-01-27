@@ -46,8 +46,8 @@ export class SpielenPage {
       this.cardHistory = JSON.parse(historie) || [];
       this.totalCardsPlayed= this.cardHistory.length;
       console.log(this.totalCardsPlayed);
-      if(this.totalCardsPlayed === 5 || this.totalCardsPlayed === 10 || this.totalCardsPlayed === 15
-        || this.totalCardsPlayed === 20 ||this.totalCardsPlayed === 25 || this.totalCardsPlayed === 30 ){
+      if(this.totalCardsPlayed === 4 || this.totalCardsPlayed === 9 || this.totalCardsPlayed === 14
+        || this.totalCardsPlayed === 19 ||this.totalCardsPlayed === 24 || this.totalCardsPlayed === 29 ){
         //this.navCtrl.push(Badge1Page,{cardsPlayed:this.totalCardsPlayed} );
         this.presentModal();
       }
@@ -57,7 +57,7 @@ export class SpielenPage {
   }
 
   presentModal() {
-    let badgeModal = this.modalCtrl.create(BadgePage, { cardsPlayed:this.totalCardsPlayed });
+    let badgeModal = this.modalCtrl.create(BadgePage, { cardsPlayed:this.totalCardsPlayed, page: "spielenPage" });
     badgeModal.present();
   }
 

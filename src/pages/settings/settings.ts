@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, ModalController, AlertController } from 'ionic-angular';
 import {Storage} from "@ionic/storage";
 import { LocalNotifications } from "@ionic-native/local-notifications";
+import {BadgePage} from "../badge/badge";
+import {HistoriePage} from "../historie/historie";
+
 
 @IonicPage()
 @Component({
@@ -10,16 +13,18 @@ import { LocalNotifications } from "@ionic-native/local-notifications";
 })
 export class SettingsPage {
   history: number[];
+  totalCardsPlayed: number;
+  cardHistory: number[];
 
   data = { title:'', description:'', date:'', time:'' };
-
 
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private storage: Storage,
               public localNotifications: LocalNotifications,
               public platform: Platform,
-              public alertCtrl: AlertController) {
+              public alertCtrl: AlertController,
+              private modalCtrl: ModalController) {
   }
 
   btnPushClicked(){
@@ -35,6 +40,7 @@ export class SettingsPage {
       });
     });
   }
+
   setNotification(){
     let year = new Date().getFullYear();
     let month = new Date().getMonth();
@@ -94,14 +100,31 @@ export class SettingsPage {
 
 
   //History löschen
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad SettingsPage');
   }
-
   public async showHistory(){
     this.history= await this.storage.get('history');
+    console.log(this.history);
+  }
+  public async showBadges(){
+    this.storage.get('history').then((historie) => {
+      this.cardHistory = JSON.parse(historie) || [];
+      this.totalCardsPlayed = this.cardHistory.length;
+      console.log(this.totalCardsPlayed);
+      this.presentModal()
+    })
   }
 
+  presentModal() {
+    let badgeModal = this.modalCtrl.create(BadgePage, { cardsPlayed:this.totalCardsPlayed, page: "meinProfilPage" });
+    badgeModal.present();
+  }
+
+  showPlayedCards(){
+    this.navCtrl.setRoot(HistoriePage);
+  }
   public clearHistory(){
     this.storage.clear().then(() => {console.log('Historie entfernt')});
   }

@@ -3,7 +3,7 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Einstellungen</ion-title>
+    <ion-title>Mein Profil</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -36,11 +36,14 @@
       <button ion-button full round>hinzufügen</button>
     </div>
   </form>
-
-  <br>
-  <h3> Gespielte Karten kannst du hier einsehen oder auch löschen</h3>
-  <button ion-button color="secondary" (click)="showHistory()">Gespielte Ids</button>
-  <button ion-button color="danger" (click)="clearHistory()">Historie entfernen</button>
-  <div>{{history}}</div>
+  <div>
+    <button ion-button full color="light" (click)="showPlayedCards()">Bereits gespielte Karten</button>
+  </div>
+  <div>
+    <button ion-button full color="light" (click)="clearHistory()">Neue Spielrunde starten und Kartenhistorie löschen</button>
+  </div>
+  <div>
+    <button ion-button full color="light" (click)="showBadges()">Meine Abzeichen in dieser Runde</button>
+  </div>
 </ion-content>
 

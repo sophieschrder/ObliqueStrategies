@@ -5,17 +5,20 @@
 <ion-menu [content]="content">
 
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Pages</ion-title>
+    <ion-toolbar >
+      <ion-title>Quriosity</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content>
+    <div class="custom">
     <ion-list>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
+      <button ion-item  *ngFor="let p of pages" (click)="openPage(p)">
+        <ion-icon name='{{p.icon}}'></ion-icon>
         {{p.title}}
       </button>
     </ion-list>
+    </div>
   </ion-content>
 
 </ion-menu>
