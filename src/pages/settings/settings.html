@@ -8,34 +8,9 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button (click)="setNotification()">Push-Benachrichtigung</button>
-  <br>Das ist eine 14 tägige Erinnerung
-  <br>
-  <br>
-  <h3> Hier kannst du selbst eine Erinnerung festlegen </h3>
-  <form (ngSubmit)="submit()">
-    <ion-list>
-      <ion-item>
-        <ion-label floating>Titel</ion-label>
-        <ion-input type="text" [(ngModel)]="data.title" name="title"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>Beschreibung</ion-label>
-        <ion-input type="text" [(ngModel)]="data.description" name="description"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>Datum</ion-label>
-        <ion-datetime displayFormat="DD/MM/YY" pickerFormat="D MMMM YYYY" [(ngModel)]="data.date" name="date"></ion-datetime>
-      </ion-item>
-      <ion-item>
-        <ion-label floating>Uhrzeit</ion-label>
-        <ion-datetime displayFormat="HH:mm" pickerFormat="HH mm" [(ngModel)]="data.time" name="time"></ion-datetime>
-      </ion-item>
-    </ion-list>
-    <div padding>
-      <button ion-button full round>hinzufügen</button>
-    </div>
-  </form>
+  <div>
+    <button ion-button full (click)="btnPushClicked()">Benachrichtigungen zulassen</button>
+  </div>
   <div>
     <button ion-button full color="light" (click)="showPlayedCards()">Bereits gespielte Karten</button>
   </div>
