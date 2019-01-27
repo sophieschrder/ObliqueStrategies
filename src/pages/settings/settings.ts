@@ -13,6 +13,7 @@ export class SettingsPage {
 
   data = { title:'', description:'', date:'', time:'' };
 
+
   constructor(public navCtrl: NavController,
               public navParams: NavParams,
               private storage: Storage,
@@ -34,6 +35,32 @@ export class SettingsPage {
       });
     });
   }
+  setNotification(){
+    let year = new Date().getFullYear();
+    let month = new Date().getMonth();
+    let day = new Date().getDate();
+
+    let time1 = new Date(year, month, day, 17, 31, 0, 0);
+    let time2 = new Date(year, month, day, 17, 32, 0, 0);
+
+    this.localNotifications.schedule([
+      {
+        id: 1,
+        title: 'My first notification',
+        text: 'First notification test one',
+        trigger: {firstAt: new Date(time1)},
+        data: {"id": 1, "name": "Mr. A"}
+      },
+      {
+        id: 2,
+        title: 'My Second notification',
+        text: 'Second notification on 12 pm',
+        trigger: {firstAt: new Date(time2)},
+        data: {"id": 2, "name": "Mr. B"}
+      }
+    ]);}
+
+
 
   //Funktion/Methode des lokalen Benachrichtigungs-Schedulers
  /* submit() {
