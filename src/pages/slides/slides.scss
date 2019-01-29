@@ -2,6 +2,9 @@ page-slides {
 
   ion-slide {
     background: white;
+    box-shadow: inset 0px 0px 10px 0px #434343;
+    -webkit-box-shadow: inset 0px 0px 10px 0px #434343;
+    -moz-box-shadow: inset 0px 0px 10px 0px #434343;
     border-radius: 10px;
     background-position: center;
     background-size: cover;

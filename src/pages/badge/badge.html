@@ -12,6 +12,7 @@
 </ion-header>
 
 <ion-content padding>
+  <div class = "cont">
   <div *ngIf="parentPage == 'spielenPage'">
     <h3 >Du hast bis jetzt {{ this.cardNumber + 1}}  Karten gespielt und dir ein neues Abzeichen verdient!</h3>
     <ion-icon *ngIf="cardNumber === 4" name=trophy></ion-icon>
@@ -27,6 +28,7 @@
     <ion-icon *ngIf="cardNumber > 14" name=heart></ion-icon>
     <ion-icon *ngIf="cardNumber > 19" name=bulb></ion-icon>
     <ion-icon *ngIf="cardNumber > 24" name=beer></ion-icon>
+  </div>
   </div>
 
 
