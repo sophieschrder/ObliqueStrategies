@@ -8,17 +8,18 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-item color="light">
+    <ion-label>Tägliche Erinnerung</ion-label>
+    <ion-toggle [(ngModel)]="reminderOn" (ionChange)="setDailyReminder()" ></ion-toggle>
+  </ion-item>
   <div>
-    <button ion-button full (click)="btnPushClicked()">Benachrichtigungen zulassen</button>
-  </div>
-  <div>
-    <button ion-button full color="light" (click)="showPlayedCards()">Bereits gespielte Karten</button>
+    <button ion-button full color="light" (click)="showPlayedCards()">Bereits gespielte Karten anzeigen</button>
   </div>
   <div>
     <button ion-button full color="light" (click)="clearHistory()">Neue Spielrunde starten und Kartenhistorie löschen</button>
   </div>
   <div>
-    <button ion-button full color="light" (click)="showBadges()">Meine Abzeichen in dieser Runde</button>
+    <button ion-button full color="light" (click)="showBadges()">Meine Abzeichen in dieser Runde anzeigen</button>
   </div>
 </ion-content>
 

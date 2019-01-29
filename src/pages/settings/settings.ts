@@ -15,6 +15,7 @@ export class SettingsPage {
   history: number[];
   totalCardsPlayed: number;
   cardHistory: number[];
+  reminderOn: boolean;
 
   data = { title:'', description:'', date:'', time:'' };
 
@@ -27,18 +28,38 @@ export class SettingsPage {
               private modalCtrl: ModalController) {
   }
 
-  btnPushClicked(){
+  setDailyReminder(){
     this.platform.ready().then(() => {
-      // zeitversetzte Benachrichtigung planen
+      if (this.reminderOn){
+      let hours= new Date().getHours();
+      let minutes = new Date().getMinutes();
       this.localNotifications.schedule({
         title: 'Quriosity',
-        text: 'Hey! Zieh mal heute wieder eine Karte',
-        trigger: {at: new Date(new Date().getTime() + 3600)}, // 14 Tage = 1209600000 sek
+        text: 'Heute schon eine Quriosity Karte gespielt?',
+        //trigger: {at: new Date(new Date().getTime() + 3600) },//Hier kann Auslösung zu einem bestimmten Zeitpunkt erfolgen
+        trigger: {every: { hour: hours, minute: minutes +1 } },// Jeden Tag um die gleiche Uhrzeit
         icon: "ic_notifications",
         led: 'FF0000',
         sound: this.setSound(),
       });
+      let alert = this.alertCtrl.create({
+        title: 'Danke!',
+        subTitle: 'Du bekommst ab jetzt eine tägliche Erinnerung von Quriosity',
+        buttons: ['OK']
+      });
+      alert.present();
+      }
+      else {
+        this.localNotifications.cancelAll();
+        let alert = this.alertCtrl.create({
+          title: '',
+          subTitle: 'Tägliche Erinnerung von Quriosity ist ausgeschaltet.',
+          buttons: ['OK']
+        });
+        alert.present();
+      }
     });
+
   }
 
   setNotification(){
@@ -67,28 +88,6 @@ export class SettingsPage {
     ]);}
 
 
-
-  //Funktion/Methode des lokalen Benachrichtigungs-Schedulers
- /* submit() {
-    console.log(this.data);
-    var date = new Date(this.data.date+" "+this.data.time);
-    console.log(date);
-    this.localNotifications.schedule({
-      text: 'Delayed ILocalNotification',
-      at: date,
-      icon: "ic_notifications",
-      led: 'FF0000',
-      sound: this.setSound(),
-    });
-    let alert = this.alertCtrl.create({
-      title: 'Gratulation!',
-      subTitle: 'Benachrichtigung festgelegt um '+date,
-      buttons: ['OK']
-    });
-    alert.present();
-    this.data = { title:'', description:'', date:'', time:'' };
-  } */
-
   //Funktion zum Einstellen der Sounddatei für die jeweilige Plattform
   setSound() {
     if (this.platform.is('android')) {
@@ -97,7 +96,6 @@ export class SettingsPage {
       return 'file://assets/sounds/Rooster.caf'
     }
   }
-
 
   //History löschen
 
