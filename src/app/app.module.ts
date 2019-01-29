@@ -1,3 +1,4 @@
+import { LocalNotifications } from "@ionic-native/local-notifications";
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -61,7 +62,8 @@ import { RestProvider } from '../providers/rest/rest';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     CardServiceProvider,
-    RestProvider
+    LocalNotifications,
+    RestProvider,
   ]
 })
 export class AppModule {}
