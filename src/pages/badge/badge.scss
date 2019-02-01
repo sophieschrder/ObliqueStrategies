@@ -2,8 +2,15 @@ page-badge {
   ion-content {
     ion-icon {
       font-size: 10em;
-      color: yellow;
+      color: #ffb90e;
       padding: 0.4em;
+
+      text-shadow:
+      0 0 5px #FFFFFF,
+      0 0 10px #FFFFFF,
+      0 0 20px #FFFFFF,
+      0 0 30px #ffcb05,
+
     }
   }
 }
