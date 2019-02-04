@@ -1,12 +1,18 @@
 page-settings {
-  ion-content {
-    ion-item{
 
-    }
-    ion-icon {
-      font-size: 3em;
-      color: blue;
-      padding: 0.4em;
-    }
+  .item {
+    color: $text;
+    font-size: 1em;
+    background-color: #2d2d2d;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+
+  .button {
+    padding: 1.5em;
+    margin-top: 1em;
+    Background-Color: #636363;
+    font-size: 1em;
+    color: $text;
   }
 }
