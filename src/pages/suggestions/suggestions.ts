@@ -13,13 +13,14 @@ import {HttpClient} from "@angular/common/http";
 
 export class SuggestionsPage {
   suggestionForm: FormGroup;
-  myUrl = "https://hooks.slack.com/services/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";
+  //myUrl = "https://hooks.slack.com/services/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";
+  myUrl = "http://localhost:8100/api/slack/services/TD6RU4X0U/BFY6X1MCL/ZlzJDbXeI7SjSjuRLd4DDwZK"
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private fb: FormBuilder,
               private toastCtrl: ToastController, public restProvider: RestProvider, private http: HttpClient) {
     this.suggestionForm = this.fb.group({
       name: ['', Validators.required],
-      suggestion: ['', Validators.required],
+      text: ['', Validators.required],
       email: ['', Validators.email],
       contactAllowed: [],
       readDatenschutz: [],
@@ -30,7 +31,7 @@ export class SuggestionsPage {
   submitForm() {
     console.log(this.suggestionForm.value);
     //this.sendSuggestion(this.suggestionForm.value);
-    this.sendSlackMessage();
+    this.sendSlackMessage(this.suggestionForm);
     this.presentToast();
     this.suggestionForm.reset();
   }
@@ -38,7 +39,7 @@ export class SuggestionsPage {
 
   presentToast() {
     let toast = this.toastCtrl.create({
-      message: `Danke für deinen Kartenvorschlag:  ${this.suggestionForm.controls.suggestion.value}. 
+      message: `Danke für deinen Kartenvorschlag:  ${this.suggestionForm.controls.text.value}. 
                 Vielleicht ist die neue Karte schon beim nächsten Update mit dabei!`,
       duration: 5000,
       position: 'middle',
@@ -62,12 +63,12 @@ export class SuggestionsPage {
     });
   }
 
-  sendSlackMessage() {
-    var messageText =
-      {
-        "text": "Hello test."
-      }
-    return this.http.post(this.myUrl, messageText)
+  sendSlackMessage(suggestionForm) {
+    var messageText = suggestionForm.controls.text.value;
+    console.log(JSON.stringify(messageText));
+    let data= { "text": messageText }
+    console.log(data);
+    return this.http.post(this.myUrl, data)
       .subscribe();
   }
 }
