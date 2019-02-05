@@ -61,6 +61,7 @@ export class SettingsPage {
     });
 
   }
+/*
 
   setNotification(){
     let year = new Date().getFullYear();
@@ -86,6 +87,7 @@ export class SettingsPage {
         data: {"id": 2, "name": "Mr. B"}
       }
     ]);}
+*/
 
 
   //Funktion zum Einstellen der Sounddatei für die jeweilige Plattform

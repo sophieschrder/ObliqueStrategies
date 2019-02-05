@@ -56,7 +56,6 @@ export class MyApp {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
       this.setRootPage();
-
       timer(4000).subscribe(() => this.showSplash = false)
     });
   }
