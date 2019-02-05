@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../assets/fonts/fonts/icomoon.eot?t43p80');
+  src:  url('../assets/fonts/fonts/icomoon.eot?t43p80#iefix') format('embedded-opentype'),
+  url('../assets/fonts/fonts/icomoon.ttf?t43p80') format('truetype'),
+  url('../assets/fonts/fonts/icomoon.woff?t43p80') format('woff'),
+  url('../assets/fonts/fonts/icomoon.svg?t43p80#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin makeIcon($arg, $val) {
+  .ai-#{$arg}:before ,
+  .ion-ios-ai-#{$arg}:before ,
+  .ion-ios-ai-#{$arg}-outline:before ,
+  .ion-md-ai-#{$arg}:before ,
+  .ion-md-ai-#{$arg}-outline:before  {
+    content: $val;
+    font-size: 1.5em;
+  }
+}
+
+@include makeIcon(trophy8, "\e900");
+@include makeIcon(trophy7, "\e901");
+@include makeIcon(trophy5, "\e902");
+@include makeIcon(trophy6, "\e903");
+@include makeIcon(trophy3, "\e91a");
+@include makeIcon(trophy4, "\e933");
+@include makeIcon(trophy2, "\e93b");
+@include makeIcon(trophy1, "\e93c");
+@include makeIcon(onehand2, "\e904");
+@include makeIcon(editor, "\e905");
+@include makeIcon(keyboardalttab, "\e906");
+@include makeIcon(no-chat2, "\e907");
+@include makeIcon(no-chat1, "\e908");
+@include makeIcon(terminal, "\e909");
+@include makeIcon(stackoverflow, "\e90a");
+@include makeIcon(explaintooldperson,"\e90b");
+@include makeIcon(remote, "\e90c");
+@include makeIcon(walking1, "\e90d");
+@include makeIcon(walking2, "\e90e");
+@include makeIcon(walking3, "\e90f");
+@include makeIcon(nocomputer, "\e910");
+@include makeIcon(explainchild, "\e911");
+@include makeIcon(monitor, "\e912");
+@include makeIcon(newtask, "\e913");
+@include makeIcon(programminglanugage, "\e914");
+@include makeIcon(nointernet, "\e915");
+@include makeIcon(office, "\e916");
+@include makeIcon(otherroom, "\e917");
+@include makeIcon(ryhme, "\e918");
+@include makeIcon(keyboardotherhand, "\e919");
+@include makeIcon(onehand1,"\e91b");
+@include makeIcon(changelanguage2, "\e91c");
+@include makeIcon(changelanguage1, "\e91d");
+@include makeIcon(fruits, "\e91e");
+@include makeIcon(books, "\e91f");
+@include makeIcon(restaurant, "\e920");
+@include makeIcon(delete2, "\e921");
+@include makeIcon(delete1, "\e922");
+@include makeIcon(switchwork, "\e923");
+@include makeIcon(standing, "\e924");
+@include makeIcon(cancelmeeting2, "\e925");
+@include makeIcon(cancelmeeting1, "\e926");
+@include makeIcon(mailchat, "\e927");
+@include makeIcon(help1, "\e928");
+@include makeIcon(help2, "\e929");
+@include makeIcon(wayhome1, "\e92a");
+@include makeIcon(wayhome2, "\e92b");
+@include makeIcon(nocandy, "\e92c");
+@include makeIcon(nocoffee, "\e92d");
+@include makeIcon(writing, "\e92e");
+@include makeIcon(penpaper, "\e92f");
+@include makeIcon(trophy, "\e930");
+@include makeIcon(mouse1, "\e931");
+@include makeIcon(mouse2, "\e932");
+@include makeIcon(talking1, "\e934");
+@include makeIcon(slackattak, "\e935");
+@include makeIcon(talking2, "\e936");
+@include makeIcon(english, "\e937");
+@include makeIcon(computer, "\e938");
+@include makeIcon(laydown, "\e939");
+@include makeIcon(presentation, "\e93a");
+
