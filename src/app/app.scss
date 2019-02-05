@@ -130,16 +130,21 @@ ion-icon {
   font-size: 20px;
   font-family: call($font-path);
   display: block;
-  color: white;
+  color: $text;
 }
 // Style for the side-menu
 .custom {
-  background-color: #3f4041 !important; /* This sets the background color*/
+  background-color: $backgroundColor !important; /* This sets the background color*/
 }
 /*Set the background to transparent for ion-item*/
 .custom .item {
-  background-color: transparent;
-  color: white;    /*Text color for each item*/
+  background-color:  #2d2d2d;
+  color:$text;    /*Text color for each item*/
+  font-size: 15px;
+}
+
+ion-header ion-icon.back-button-icon.icon {
+  color:$text;
 }
 
 .splash {

@@ -3,14 +3,16 @@ page-badge {
     ion-icon {
       font-size: 10em;
       color: #ffb90e;
-      padding: 0.4em;
-
+      padding-bottom: unset;
+      padding-top: unset;
       text-shadow:
       0 0 5px #FFFFFF,
       0 0 10px #FFFFFF,
       0 0 20px #FFFFFF,
       0 0 30px #ffcb05,
-
     }
+  }
+  .cont{
+    text-align: center;
   }
 }
