@@ -41,7 +41,6 @@ export class SuggestionsPage {
       position: 'middle',
       //cssClass: 'myToast'
     });
-
     toast.present();
   }
 
