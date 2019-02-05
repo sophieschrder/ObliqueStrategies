@@ -16,10 +16,10 @@
 
     <button ion-button full  text-wrap (click)="showBadges()">Meine Abzeichen in dieser Runde anzeigen</button>
 
-    <ion-item>
+    <button ion-button full>
       <ion-label>Tägliche Erinnerung</ion-label>
       <ion-toggle [(ngModel)]="reminderOn" (ionChange)="setDailyReminder()" ></ion-toggle>
-    </ion-item>
+    </button>
   </div>
 </ion-content>
 

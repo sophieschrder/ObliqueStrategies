@@ -125,7 +125,14 @@ export class SettingsPage {
   showPlayedCards(){
     this.navCtrl.setRoot(HistoriePage);
   }
+
   public clearHistory(){
     this.storage.clear().then(() => {console.log('Historie entfernt')});
+    let alert = this.alertCtrl.create({
+      title: 'Neues Spiel',
+      subTitle: 'Deine Kartenhistorie und Abzeichen wurden gelöscht.',
+      buttons: ['OK']
+    });
+    alert.present();
   }
 }
