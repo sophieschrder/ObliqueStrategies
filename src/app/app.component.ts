@@ -4,10 +4,17 @@ import { Platform, MenuController, Nav } from 'ionic-angular';
 
 import { StartPage } from '../pages/start/start';
 import { HistoriePage} from "../pages/historie/historie";
+import { SettingsPage} from "../pages/settings/settings";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import {SlidesPage} from "../pages/slides/slides";
+import {StoebernPage} from "../pages/stoebern/stoebern";
+import {AboutPage} from "../pages/about/about";
+import {SpielenPage} from "../pages/spielen/spielen";
+import {Storage} from "@ionic/storage";
+
+import {timer} from 'rxjs/observable/timer';
+import {SuggestionsPage} from "../pages/suggestions/suggestions";
 
 
 @Component({
@@ -16,22 +23,29 @@ import {SlidesPage} from "../pages/slides/slides";
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   // make HelloIonicPage the root (or first) page
-  rootPage = StartPage;
-  pages: Array<{title: string, component: any}>;
+  rootPage: any;
+  pages: Array<{ title: string, component: any, icon: string}>;
+
+  showSplash = true;
 
   constructor(
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
+    private storage: Storage,
   ) {
     this.initializeApp();
 
     // set our app's pages
     this.pages = [
-      { title: 'Startseite', component: StartPage },
-      { title: 'Stöbern', component: SlidesPage},
-      { title: 'Meine Spielhistorie', component: HistoriePage}
+      {title: 'Startseite', component: StartPage, icon: 'flag'},
+      {title: 'Spielen', component: SpielenPage, icon: 'game-controller-a'},
+      {title: 'Stöbern', component: StoebernPage, icon: 'eye'},
+      {title: 'Meine Spielhistorie', component: HistoriePage, icon: 'paper'},
+      {title: 'Mein Profil', component: SettingsPage, icon: 'ios-settings'},
+      {title: 'Karte vorschlagen', component:SuggestionsPage, icon: 'paper-plane'},
+      {title: 'About', component: AboutPage, icon: 'information-circle'}
     ];
   }
 
@@ -41,6 +55,8 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.setRootPage();
+      timer(4000).subscribe(() => this.showSplash = false)
     });
   }
 
@@ -49,5 +65,16 @@ export class MyApp {
     this.menu.close();
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
+  }
+
+  //Move rootpage to history if app has been played once
+  setRootPage() {
+    this.storage.get("history").then((history) => {
+      if (history) {
+        this.rootPage = HistoriePage;
+      } else {
+        this.rootPage = StartPage;
+      }
+    });
   }
 }

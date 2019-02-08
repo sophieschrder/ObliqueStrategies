@@ -3,22 +3,29 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Oblique Strategies</ion-title>
+    <ion-title>Startseite</ion-title>
   </ion-navbar>
 </ion-header>
-
-
 <ion-content padding>
+  <div class="cont">
+    <h1> Willkommen bei Quriosity</h1>
 
-  <h3>Welcome to Oblique Strategies</h3>
+      <p>
+        Hier erwarten Dich viele spannende und lustige Aufgaben, die
+        zum kreativen Arbeiten und Querdenken anregen. <br> <br>
+        Du willst die Dir vorgeschlagene Aufgabe nicht machen?
+        Kein Problem - Du kannst bis zu zweimal schieben, danach MUSST Du die Mission annehmen!!
+        Öffnest Du die App erneut, so wird Dir Deine aktuelle Karte angezeigt. <br> <br>
+        Hast Du die Aufgabe bereits beendet, dann gehe
+        über das Menu auf "Spielen" und Du erhälst eine neue Aufgabe.
 
-  <p>
-    This is the starter page!
-  </p>
-  <p>
-    <button ion-button color="light" menuToggle>Toggle Menu</button>
-  </p>
+    </p>
+    <p>VIEL SPAß !</p>
 
+    <div class="ico">
+      <ion-icon name="md-game-controller-a"
+                style="font-size: 120px; padding: 0.1em; color: darkorange"
+                (click)="goAnOtherPage()"></ion-icon>
+    </div>
+  </div>
 </ion-content>
-
-

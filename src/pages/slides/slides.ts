@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {CARDS} from "../../assets/mock-cards";
+import {Component} from '@angular/core';
+import {IonicPage, NavController, NavParams} from 'ionic-angular';
 import {Card} from "../../cards";
 
 
@@ -11,9 +10,10 @@ import {Card} from "../../cards";
 })
 export class SlidesPage {
 
-  cards: Array<Card> = CARDS;
+  cards: Array<Card>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.cards = navParams.get('cards');
   }
 
   ionViewDidLoad() {

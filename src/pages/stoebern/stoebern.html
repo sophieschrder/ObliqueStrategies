@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Stöbermodus</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <div class="cont">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+
+          <p>Im Stöbermodus kannst du dir alle Karten des Spiels anschauen oder in den einzelnen Kategorien stöbern, um
+            dir
+            so einen Überblick zu verschaffen was dich erwartet. </p>
+
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button block (click)="showAll()" class="all">
+            Alle Karten
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button icon-only block (click)="pushPage('arbeitsplatz')" class="arbeitsplatz">
+            <ion-icon name="desktop"></ion-icon>
+          </button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <button ion-button icon-only block (click)="pushPage('kommunikation')" class="kommunikation">
+            <ion-icon name="chatboxes"></ion-icon>
+          </button>
+
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button icon-only block (click)="pushPage('bleibTapfer')" class="bleibTapfer">
+            <ion-icon name="flash"></ion-icon>
+          </button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <button ion-button icon-only block (click)="pushPage('Arbeitsmittel')" class="Arbeitsmittel">
+            <ion-icon name="hammer"></ion-icon>
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <div>
+          <button ion-button icon-only block (click)="pushPage('informationsbeschaffung')"
+                  class="informationsbeschaffung">
+            <ion-icon name="information-circle"></ion-icon>
+          </button>
+        </div>
+      </ion-col>
+      <ion-col>
+        <div>
+          <button ion-button icon-only block (click)="pushPage('Perspektivwechsel')" class="Perspektivwechsel">
+            <ion-icon name="camera"></ion-icon>
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </div>
+</ion-content>

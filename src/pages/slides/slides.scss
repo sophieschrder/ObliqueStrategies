@@ -1,9 +1,38 @@
 page-slides {
- ion-slide{
-   background: #ffcb05;
-   background-image: url('../../assets/imgs/Q_solo_thin_rgb.png');
-   background-position: center;
-   background-size: contain;
-   background-repeat: no-repeat;
- }
+
+  ion-slide {
+    background: white;
+    box-shadow: inset 0px 0px 10px 0px #434343;
+    -webkit-box-shadow: inset 0px 0px 10px 0px #434343;
+    -moz-box-shadow: inset 0px 0px 10px 0px #434343;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  ion-icon {
+    color: $cardIcon;
+    font-size: 4em;
+    padding: 0.4em;
+    z-index: 1 !important ;
+  }
+
+  h3 {
+    color: $cardText;
+    font-size: 2em;
+    text-align: center;
+    margin: 5px;
+  }
+
+  p.card-category {
+    font-weight: lighter;
+    color: $cardTitel;
+    text-align: center;
+    font-size: 1.5em;
+    vertical-align: top;
+  }
 }
+
+
+

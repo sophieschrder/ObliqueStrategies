@@ -1,0 +1,24 @@
+page-suggestions {
+
+ .submitButton {
+    margin-top: 1em;
+    color: $text;
+  }
+
+  .checkbuttons{
+    padding-top: 1em;
+  }
+
+.item {
+  border-radius: 5px;
+  background-color: #2d2d2d;
+  font-size: 0.8em;
+  font-family: call($font-path);
+  color: $text;
+  padding: 0.1em;
+}
+
+.item .label{
+    color: $text;
+  }
+}

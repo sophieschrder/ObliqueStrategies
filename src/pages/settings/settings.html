@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mein Profil</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="cont">
+
+    <button ion-button full  text-wrap (click)="showPlayedCards()">Bereits gespielte Karten anzeigen</button>
+
+    <button ion-button full  text-wrap (click)="clearHistory()">Neustart: Kartenhistorie löschen</button>
+
+    <button ion-button full  text-wrap (click)="showBadges()">Meine Abzeichen in dieser Runde anzeigen</button>
+
+    <button ion-button full text-wrap>
+      <ion-label>Tägliche Erinnerung</ion-label>
+      <ion-toggle [(ngModel)]="reminderOn" (ionChange)="setDailyReminder()" ></ion-toggle>
+    </button>
+  </div>
+</ion-content>
+

@@ -1,21 +1,23 @@
 
 <ion-header>
 <ion-navbar>
-  <button ion-button menuToggle>
+<button ion-button menuToggle>
     <ion-icon name="menu"></ion-icon>
   </button>
-  <ion-title>Stöbermodus</ion-title>
+  <ion-title></ion-title>
 </ion-navbar>
 </ion-header>
 
 
 
 <ion-content padding>
-  <ion-slides pager>
-
-    <ion-slide *ngFor="let card of cards">
-      <h2>{{card.text}}</h2>
+  <ion-slides pager loop="true" >
+    <ion-slide *ngFor="let card of cards" ngClass="{{card.category}}">
+      <p class="card-category"><b>{{card.category}}</b></p>
+      <ion-icon name={{card.img}}></ion-icon>
+      <h3>{{card.text}}</h3>
     </ion-slide>
-
   </ion-slides>
 </ion-content>
+
+

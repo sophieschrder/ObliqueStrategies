@@ -1,0 +1,89 @@
+page-spielen {
+  .scroll-content {
+    display: flex;
+    flex-direction: column;
+
+    ion-slides {
+      display: flex;
+      border-radius: 10px !important;
+      overflow: hidden !important;
+    }
+  }
+
+  ion-grid {
+    height: 100%;
+  }
+
+  ion-row.slider {
+    height: 90%;
+  }
+
+  ion-col.col {
+    height: 100%;
+  }
+
+  ion-slide {
+    background-position: center;
+    box-shadow: inset 0px 0px 10px 0px #434343;
+    -webkit-box-shadow: inset 0px 0px 10px 0px #434343;
+    -moz-box-shadow: inset 0px 0px 10px 0px #434343;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px !important;
+    overflow: hidden !important;
+
+    ion-icon {
+      color: $cardIcon;
+    }
+  }
+
+  ion-icon {
+    font-size: 4em;
+    padding: 0.4em;
+    z-index: 1 !important;
+  }
+
+  h3 {
+    color: $cardText;
+    font-size: 2em;
+    text-align: center;
+    margin: 15px;
+  }
+
+  p.card-category {
+    font-weight: lighter;
+    color: $cardTitel;
+    text-align: center;
+    font-size: 1.5em;
+    vertical-align: top;
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+  .button-md {
+    border-radius: 10px;
+    height: 1.5em;
+    color: #ffffff;
+    font-size: 44px;
+    font-weight: 400;
+    padding: 33px;
+    box-shadow: inset 0px 0px 37px 0px #2A2A2A;
+    -webkit-box-shadow: inset 0px 0px 37px 0px #2A2A2A;
+    -moz-box-shadow: inset 0px 0px 37px 0px #2A2A2A;
+    text-shadow: -4px 9px 38px #545454;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    }
+
+    //height: 5em;
+    //border-radius: 5px;
+    //background-color: #414141;
+    //text-shadow: 0px 0px 5px $cardTitel;
+    //color: #ffffff;
+    // text-shadow: 0 0 0.1em #d5ffff, 0 0 0.1em rgba(226, 220, 220, 0.6), 0 0 0.1em rgba(255, 251, 192, 0.65);
+  }
+

@@ -1,3 +1,17 @@
 page-start {
-
+  h1 {
+    text-align: center;
+    font-weight: bold;
+  }
+  p {
+    text-align: center;
+    justify-content: center;
+  }
+  .ico:hover {
+    color: #f1f1f1;
+  }
+  .ico {
+    text-align: center;
+    color: darkorange;
+  }
 }
