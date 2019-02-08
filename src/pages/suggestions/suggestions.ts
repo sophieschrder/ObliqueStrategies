@@ -12,8 +12,18 @@ import {HttpClient} from "@angular/common/http";
 
 export class SuggestionsPage {
   suggestionForm: FormGroup;
-  //myUrl = "https://hooks.slack.com/services/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";
+  myUrl = "https://hooks.slack.com/services/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";
+
+  /*
+  // to test from the web, you need to use this url:
   myUrl = "http://localhost:8100/api/slack/services/TD6RU4X0U/BFY6X1MCL/ZlzJDbXeI7SjSjuRLd4DDwZK"
+  // and insert this code for a proxy in ionic.config.json
+  "proxies": [
+    {
+      "path": "/api/slack/services",
+      "proxyUrl": "https://hooks.slack.com/services"
+    }
+    ]*/
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private fb: FormBuilder,
               private toastCtrl: ToastController, public restProvider: RestProvider, private http: HttpClient) {
