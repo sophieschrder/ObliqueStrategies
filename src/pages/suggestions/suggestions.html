@@ -15,26 +15,15 @@
   <form [formGroup]="suggestionForm" (ngSubmit)="submitForm()">
     <ion-item text-wrap>
     <div>Hast du eine Idee für eine weitere Quriosity Karte?</div>
-    <div>Dann nutze einfach dieses Formular für deinen Vorschlag.</div></ion-item>
+    <div>Dann nutze einfach dieses Formular für deinen Vorschlag.</div>
+    </ion-item>
     <ion-item>
       <ion-label floating>Name</ion-label>
       <ion-input type="text" formControlName="name"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label floating>e-mail</ion-label>
-      <ion-input type="email" formControlName="email"></ion-input>
-    </ion-item>
-    <ion-item>
-    <ion-label floating>Mein Vorschlag für eine neue Karte</ion-label>
-    <ion-textarea formControlName="text"></ion-textarea>
-  </ion-item>
-    <ion-item class="checkbuttons">
-      <ion-label text-wrap>Ich möchte gerne den Qudosoft Newsletter erhalten</ion-label>
-      <ion-checkbox formControlName="contactAllowed"></ion-checkbox>
-    </ion-item>
-    <ion-item class="checkbuttons">
-      <ion-label text-wrap>Ich akzeptiere die Datenschutzregelung </ion-label>
-      <ion-checkbox formControlName="readDatenschutz" (click)="showDatenschutz()"></ion-checkbox>
+      <ion-label floating>Mein Vorschlag für eine neue Karte</ion-label>
+      <ion-textarea formControlName="suggestion"></ion-textarea>
     </ion-item>
     <button ion-button block  type="submit" [disabled]="!suggestionForm.valid" class="submitButton">Abschicken</button>
   </form>
