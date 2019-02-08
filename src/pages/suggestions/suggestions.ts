@@ -39,7 +39,7 @@ export class SuggestionsPage {
                 Vielleicht ist die neue Karte schon beim nächsten Update mit dabei!`,
       duration: 5000,
       position: 'middle',
-      //cssClass: 'myToast'
+      cssClass: 'myToast'
     });
 
     toast.present();
