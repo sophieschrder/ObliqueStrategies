@@ -155,13 +155,13 @@ ion-header ion-icon.back-button-icon.icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #76B900;
+  background: #333;
 }
 
 .spinner {
   width: 40px;
   height: 40px;
-  background-color: #333;
+  background-color: #76B900;
 
   margin: 100px auto;
   -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
