@@ -45,6 +45,19 @@
   }
 }
 
+.myBigToast {
+  .toast-wrapper {
+    background: #efefef;
+    border-radius: 25px;
+    height: 6em;
+    width: 20em;
+    .toast-message{
+      color: #282828;
+      text-align: center;
+    }
+  }
+}
+
 //Card-Colors
 $cardTitel: #D1D1D1;
 $cardIcon: #D1D1D1;
