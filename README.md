@@ -1,6 +1,6 @@
 # ObliqueStrategies - The Game
 
-Kartenspiel in Form einer Mobile-App, das Menschen insb. in der Software-Entwicklungsbranche aus der täglichen Routine herausreißen und Abwechslung in den Alltag bringen.
+Kartenspiel in Form einer Mobile-App, das Menschen insb. in der Software-Entwicklungsbranche aus der täglichen Routine herausreißen und Abwechslung in den Alltag bringen soll.
 Die App lässt den User zufällige Karte ziehen und in Form einer Herausforderung mit ungewöhnlichen Situationen konfrontieren. Dabei lernt der Nutzer mit solchen Situationen umzugehen und findet evtl. neue kreative Lösungen.
 # Dependencies
 •	Ionic 4.15.0
